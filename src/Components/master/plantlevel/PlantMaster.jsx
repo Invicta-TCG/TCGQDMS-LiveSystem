@@ -63,6 +63,6 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {};
+// const mapDispatchToProps = dispatch => null;
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlantMaster);
+export default connect(mapStateToProps, null)(PlantMaster);

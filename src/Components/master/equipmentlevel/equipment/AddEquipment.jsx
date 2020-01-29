@@ -7,6 +7,7 @@ import {
   MasterLevelFormTitle,
   MasterLevelForm
 } from "../../../styledcomponents/form/MasterLevelForms";
+import TextArea from "antd/lib/input/TextArea";
 
 export default class AddEquipment extends Component {
   state = {
@@ -50,7 +51,7 @@ export default class AddEquipment extends Component {
           Add Equipment
         </PrimaryButton>
         <Modal
-          width="300px"
+          width="480px"
           visible={visible}
           closable={false}
           onOk={this.handleOk}
@@ -87,30 +88,59 @@ export default class AddEquipment extends Component {
             </MasterLevelFormTitle>
           }
         >
-          <MasterLevelForm unalignedform>
+          <MasterLevelForm>
             {/* <Icon type="close-circle" onClick={this.handleCancel} style={{marginLeft:'300px',marginTop:'-65px',color:'white'}}/> */}
 
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter Code" />
             </div>
 
             {/* User Role */}
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Name
+                Equipment Name:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Equipment Name"
+              />
             </div>
 
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Plant
+                Brand Name:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Brand Name"
+              />
+            </div>
+            <div className="input_wrapper">
+              <label for="user_role" className="label">
+                Model Name:
+              </label>
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Model Name"
+              />
+            </div>
+            <div className="input_wrapper">
+              <label for="user_role" className="label">
+                Description:
+              </label>
+              <TextArea
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Description "
+                style={{ width: "180px" }}
+              />
             </div>
           </MasterLevelForm>
         </Modal>

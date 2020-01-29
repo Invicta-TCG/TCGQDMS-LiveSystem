@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Modal, Button, Icon, Select } from "antd";
+import { Input, Modal, Button, Icon, Select } from "antd";
 
 import {
   MasterLevelForm,
@@ -107,35 +107,43 @@ export default class EmployeeAddForm extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="id" className="label">
-                Code
+                Code:
               </label>
-              <Input id="id" name="id" placeholder="" />
+              <Input id="id" name="id" placeholder="Enter the Code " />
             </div>
 
             {/* Plant Name */}
             <div className="input_wrapper">
               <label for="customer_name" className="label">
-                First Name
+                First Name:
               </label>
-              <Input id="customer_name" name="customer_name" placeholder="" />
+              <Input
+                id="customer_name"
+                name="customer_name"
+                placeholder="Enter the First Name"
+              />
             </div>
 
             {/* Place */}
             <div className="input_wrapper">
               <label for="address" className="label">
-                Last Name
+                Last Name:
               </label>
-              <Input id="address" name="address" placeholder="" />
+              <Input
+                id="address"
+                name="address"
+                placeholder="Enter the Last Name"
+              />
             </div>
 
             {/* T.P No */}
             <div className="input_wrapper">
               <label for="plant" className="label">
-                Plant
+                Plant:
               </label>
               <Select
                 showSearch
-                style={{ width: 190 }}
+                style={{ width: 180 }}
                 placeholder="Select a Plant"
                 optionFilterProp="children"
                 onChange={onChange}
@@ -147,22 +155,17 @@ export default class EmployeeAddForm extends Component {
                     .toLowerCase()
                     .indexOf(input.toLowerCase()) >= 0
                 }
-              >
-                <Option value="peliyagoda">Peliyagoda</Option>
-                <Option value="jaffna">Jaffna</Option>
-                <Option value="trincomalee">Trincomalee</Option>
-                <Option value="trincomalee">Ratmalana</Option>
-              </Select>
+              ></Select>
             </div>
 
             <div className="input_wrapper">
               <label for="plant" className="label">
-                User Role
+                Desigination:
               </label>
               <Select
                 showSearch
-                style={{ width: 190 }}
-                placeholder="Select User Role"
+                style={{ width: 170 }}
+                placeholder="Select the Desigination"
                 optionFilterProp="children"
                 onChange={onChange}
                 onFocus={onFocus}
@@ -173,39 +176,43 @@ export default class EmployeeAddForm extends Component {
                     .toLowerCase()
                     .indexOf(input.toLowerCase()) >= 0
                 }
-              >
-                <Option value="QC Manager">QC Manager</Option>
-                <Option value="QC Assistant Manager">
-                  QC Assistant Manager
-                </Option>
-                <Option value="QC Staff">QC Staff</Option>
-                <Option value="QC Technician">QC Technician</Option>
-                <Option value="Plant manager">Plant manager</Option>
-              </Select>
+              ></Select>
             </div>
             <div className="input_wrapper">
               <label for="address" className="label">
-                Address
+                Address:
               </label>
-              <Input id="address" name="address" placeholder="" />
+              <Input
+                id="address"
+                name="address"
+                placeholder="Enter the Address"
+              />
             </div>
             <div className="input_wrapper">
               <label for="phoneno" className="label">
-                Phone No
+                Phone No:
               </label>
-              <Input id="phoneno" name="phoneno" placeholder="" />
+              <Input
+                id="phoneno"
+                name="phoneno"
+                placeholder="Enter the Contact No"
+              />
             </div>
             <div className="input_wrapper">
               <label for="username" className="label">
-                User Name
+                User Name:
               </label>
-              <Input id="username" name="username" placeholder="" />
+              <Input
+                id="username"
+                name="username"
+                placeholder="Enter the User Name"
+              />
             </div>
             <div className="input_wrapper">
               <label for="email" className="label">
-                Email
+                Email:
               </label>
-              <Input id="email" name="email" placeholder="" />
+              <Input id="email" name="email" placeholder="Enter the Email" />
             </div>
           </MasterLevelForm>
         </Modal>

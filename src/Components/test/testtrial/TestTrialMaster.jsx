@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import BasicCard from "../../styledcomponents/card/BasicCard";
 import { FlexContainer } from "../../styledcomponents/container/FlexGrid";
-import { Link } from "react-router-dom";
+
 import imgObj from "../../../assets/labtesting.jpg";
 import { ManageTest, MaterialsType } from "./TestTrial";
 import { NavigationLink } from "../../styledcomponents/Link/NavLink";
@@ -185,10 +185,10 @@ const styleObj = {
   fontFamily: "Arial"
 };
 
-const styleDiv = {
-  display: "flex",
-  flexdirection: "column",
-  flexwrap: "wrap",
-  justifycontent: "spaceevenly",
-  width: "800px"
-};
+// const styleDiv = {
+//   display: "flex",
+//   flexdirection: "column",
+//   flexwrap: "wrap",
+//   justifycontent: "spaceevenly",
+//   width: "800px"
+// };

@@ -143,18 +143,20 @@ class AddMixDesignForm extends Component {
               {/* Code */}
               <div className="input_wrapper">
                 <label for="code" className="label">
-                  Code
+                  Code:
                 </label>
-                <Input id="code" name="code" placeholder="" />
+                <Input id="code" name="code" placeholder="Enter Code " />
               </div>
               {/* Plant Name */}
               <div className="input_wrapper">
                 <label for="plant_name" className="label">
-                  Production Name
+                  Production Name:
                 </label>
-                <Select id="grade" name="grade " style={{ width: "190px" }}>
-                  <Option value="grade">Production Name</Option>
-                </Select>
+                <Input
+                  id="code"
+                  name="code"
+                  placeholder="Enter production Name "
+                />
               </div>
               {/* Place */}
               <div className="input_wrapper">
@@ -162,28 +164,33 @@ class AddMixDesignForm extends Component {
                   Plant
                 </label>
                 <Select
+                  placeholder=" Plant"
                   id="main_category"
                   name="main_category "
-                  style={{ width: "190px" }}
-                >
-                  <Option value="Main Category 1">Peliyagoda</Option>
-                  <Option value="Main Category 2">Jaffna</Option>
-                </Select>
+                  style={{ width: "180px" }}
+                ></Select>
               </div>
               <div className="input_wrapper">
                 <label for="plant_name" className="label">
                   Grade
                 </label>
-                <Select id="grade" name="grade " style={{ width: "190px" }}>
-                  <Option value="grade">Grade</Option>
-                </Select>
+                <Select
+                  id="grade"
+                  name="grade "
+                  placeholder="Enter Grade"
+                  style={{ width: "180px" }}
+                ></Select>
               </div>
               {/* Place */}
               <div className="input_wrapper">
                 <label for="plant_name" className="label">
                   Date
                 </label>
-                <DatePicker id="plant_name" name="plant_name" placeholder="" />
+                <DatePicker
+                  id="plant_name"
+                  name="plant_name"
+                  placeholder="Select Date"
+                />
               </div>
             </div>
 

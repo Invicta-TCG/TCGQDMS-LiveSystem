@@ -41,5 +41,31 @@ export const FlexContainer = styled.div`
       background: white;
       padding: 10px;
     `}
+
+  ${props =>
+    props.homecard1 &&
+    css`
+            display: flex;
+            flex-direction: column
+            justify-content: space-evenly;
+            height: auto;
+            width: 300px;
+            background: rgba(252, 252, 252, 0.85);
+
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 2px 4px 3px 2px rgba(0,0,0,0.4);
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border-radius: 15px;
+            -ms-box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.41);
+            -o-box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.41);
+            -webkit-box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.41);
+            -moz-box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.41);
+            box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.41); */
+            
+  `}
     
 `;

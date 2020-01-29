@@ -61,6 +61,12 @@
   color: white;
 }
 
+@media only screen and (max-height: 800px) {
+  .testrials_logo_gap {
+    width: 999px;
+  }
+}
+
 @media only screen and (min-width: 1920px) {
   .homescreen_logo_gap {
     width: 1600px;

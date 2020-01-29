@@ -6,6 +6,7 @@ import { siteLevelReducers } from "./master/sitelevel/SiteLevelIndex";
 import { TopbarNavigationReducer } from "./topbarnavigation/TopbarNavigationReducer";
 import { mixDesignLevelReducers } from "./master/mixdesign/MixDesignIndex";
 import { samplesReducers } from "./sample/SampleIndex";
+import { testResultsReducers } from "./testresults/TestResultIndex";
 
 const allReducers = combineReducers({
   plantLevelReducers: plantLevelReducers,
@@ -14,7 +15,8 @@ const allReducers = combineReducers({
   mixDesignLevelReducers: mixDesignLevelReducers,
   siteLevelReducers: siteLevelReducers,
   samplesReducers: samplesReducers,
-  topbarNavigationReducers: TopbarNavigationReducer
+  topbarNavigationReducers: TopbarNavigationReducer,
+  testResultsReducers: testResultsReducers
 });
 
 export default allReducers;

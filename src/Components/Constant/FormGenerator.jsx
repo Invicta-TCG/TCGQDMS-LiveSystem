@@ -393,6 +393,9 @@ export default class FormGenerator extends Component {
   submitForm() {
     const { form } = this.state;
     const { onSubmit } = this.props;
+    const value = [];
+    // for(let i=0;i<form.s)
+    // console.log(form);
 
     if (onSubmit) {
       let [valid, validationErrors] = this.validateForm();
@@ -515,7 +518,7 @@ export default class FormGenerator extends Component {
                   <Input
                     name={input.name}
                     value={option.value}
-                    type="radio"
+                    type='radio'
                     onChange={this.handleInput.bind(this, input)}
                   />
                   <label>{option.text}</label>

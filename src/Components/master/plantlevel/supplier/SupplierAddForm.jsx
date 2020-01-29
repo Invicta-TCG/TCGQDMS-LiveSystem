@@ -1,11 +1,28 @@
 import React, { Component } from "react";
-import { Input, InputNumber, Modal, Button, Icon } from "antd";
+import { Input, InputNumber, Modal, Button, Icon, Select } from "antd";
 import { PrimaryButton } from "../../../styledcomponents/button/button";
 
 import {
   MasterLevelForm,
   MasterLevelFormTitle
 } from "../../../styledcomponents/form/MasterLevelForms";
+
+const { Option } = Select;
+function onChange(date, dateString) {
+  console.log(date, dateString);
+}
+
+function onBlur() {
+  console.log("blur");
+}
+
+function onFocus() {
+  console.log("focus");
+}
+
+function onSearch(val) {
+  console.log("search:", val);
+}
 
 export default class SupplierAddForm extends Component {
   state = {
@@ -98,47 +115,75 @@ export default class SupplierAddForm extends Component {
               {/* Code */}
               <div className="input_wrapper">
                 <label for="id" className="label">
-                  ID
+                  Code:
                 </label>
-                <Input id="id" name="id" placeholder="" />
+                <Input id="id" name="id" placeholder="Enter the Code" />
               </div>
 
               {/* Plant Name */}
               <div className="input_wrapper">
                 <label for="customer_name" className="label">
-                  Supplier Name
+                  Supplier Name:
                 </label>
-                <Input id="customer_name" name="customer_name" placeholder="" />
+                <Input
+                  id="customer_name"
+                  name="customer_name"
+                  placeholder="Enter the Supplier"
+                />
+              </div>
+
+              <div className="input_wrapper">
+                <label for="plant" className="label">
+                  Supplier Category:
+                </label>
+                <Select
+                  showSearch
+                  style={{ width: 170 }}
+                  placeholder="Select Supplier Cat "
+                  optionFilterProp="children"
+                  onChange={onChange}
+                  onFocus={onFocus}
+                  onBlur={onBlur}
+                  onSearch={onSearch}
+                  filterOption={(input, option) =>
+                    option.props.children
+                      .toLowerCase()
+                      .indexOf(input.toLowerCase()) >= 0
+                  }
+                ></Select>
               </div>
 
               {/* Place */}
               <div className="input_wrapper">
                 <label for="address" className="label">
-                  Address
+                  Address:
                 </label>
-                <Input id="address" name="address" placeholder="" />
+                <Input
+                  id="address"
+                  name="address"
+                  placeholder="Enter the Address"
+                />
               </div>
 
               {/* T.P No */}
               <div className="input_wrapper">
                 <label for="contactno" className="label">
-                  Contact No
+                  Contact No:
                 </label>
-                <InputNumber
+                <Input
                   className="input_number"
                   id="contactno"
                   name="contactno"
-                  placeholder=""
-                  style={{ width: "195px" }}
+                  placeholder="Enter Contact No"
                 />
               </div>
 
               {/* Description  */}
               <div className="input_wrapper">
                 <label for="email" className="label">
-                  Email
+                  Email:
                 </label>
-                <Input id="email" name="email" placeholder="" />
+                <Input id="email" name="email" placeholder="Enter the Email" />
               </div>
 
               {/* Date */}

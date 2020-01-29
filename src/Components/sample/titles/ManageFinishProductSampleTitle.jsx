@@ -10,8 +10,10 @@ const style = {
   fontSize: "medium",
   fontWeight: "600",
   alignSelf: "auto",
+  textAlign: "justify",
   padding: "10px",
-  height: "25px"
+  height: "25px",
+  flexBasis: "650px"
 };
 
 class ManageFinishProductSampleTitle extends Component {
@@ -20,8 +22,12 @@ class ManageFinishProductSampleTitle extends Component {
       <FlexContainer titles leveltitles>
         <Paragraph style={style}>Manage Finish Product Sample</Paragraph>
         <PrimaryButton
-          style={{ background: "#001328", color: "white", border: "none" }}
-          href="#/samples/viewtest"
+          style={{
+            background: "#001328",
+            color: "white",
+            border: "none"
+          }}
+          href='#/samples/viewtest'
         >
           View Test
         </PrimaryButton>

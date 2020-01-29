@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
-import { Icon , Popconfirm, Divider } from "antd";
+import { Icon, Popconfirm, Divider } from "antd";
 import CustomerMasterTitle from "../titles/CustomerMasterTitle";
 import { AntTable } from "../../../styledcomponents/table/AntTabl";
 
@@ -114,7 +114,7 @@ export default class ManageCustomer extends Component {
         sortOrder: sortedInfo.columnKey === "name" && sortedInfo.order
       },
       {
-        title: "Contact NO",
+        title: "Contact No",
         dataIndex: "role",
         key: "role",
         width: "15%",
@@ -190,7 +190,6 @@ export default class ManageCustomer extends Component {
         onChange={this.handleChange}
         pagination={{ defaultPageSize: 4 }}
         size={this.state.size}
-       
       />
     );
   }

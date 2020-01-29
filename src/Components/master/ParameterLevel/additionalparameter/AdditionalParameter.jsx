@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import { Input, Modal, Icon, Button, Select, Row, Col } from "antd";
-import {
-  MasterLevelForm,
-  MasterLevelFormTitle
-} from "../../../styledcomponents/form/MasterLevelForms";
+import { MasterLevelForm } from "../../../styledcomponents/form/MasterLevelForms";
 
 import { PrimaryButton } from "../../../styledcomponents/button/button";
 
@@ -64,16 +61,16 @@ export default class AdditionalParameter extends Component {
       <div key={i}>
         <Row>
           <Input
-            placeholder="ID"
-            name="parameter"
+            placeholder='ID'
+            name='parameter'
             value={el.parameter || ""}
             onChange={this.handleChange.bind(this, i)}
             style={{ width: "100px" }}
           />
 
           <Input
-            placeholder="Parameter"
-            name="parameter"
+            placeholder='Parameter'
+            name='parameter'
             value={el.parameter || ""}
             onChange={this.handleChange.bind(this, i)}
             style={{ width: "100px", marginLeft: "10PX" }}
@@ -81,30 +78,30 @@ export default class AdditionalParameter extends Component {
 
           <Select
             style={{ width: "140px", marginLeft: "10px" }}
-            placeholder="Select the Unit"
+            placeholder='Select the Unit'
           >
-            <Option value="g"> g </Option>
-            <Option value="Kg">kg </Option>
+            <Option value='g'> g </Option>
+            <Option value='Kg'>kg </Option>
           </Select>
 
           <Select
             style={{ width: "140px", marginLeft: "10px" }}
-            placeholder="Short Format"
+            placeholder='Short Format'
           >
-            <Option value="g"> A </Option>
-            <Option value="Kg">B </Option>
+            <Option value='g'> A </Option>
+            <Option value='Kg'>B </Option>
           </Select>
 
           <Select
             style={{ width: "190px", marginLeft: "10px" }}
-            placeholder="Equation Configuration"
+            placeholder='Equation Configuration'
           >
-            <Option value="g"> Eq_Con_001 </Option>
+            <Option value='g'> Eq_Con_001 </Option>
           </Select>
 
           <Button
-            type=""
-            value="remove"
+            type=''
+            value='remove'
             onClick={this.removeClick.bind(this, i)}
             style={{ width: "75px", marginLeft: "40px" }}
           >
@@ -132,17 +129,17 @@ export default class AdditionalParameter extends Component {
           Add Additional Parameter
         </PrimaryButton>
         <Modal
-          width="900px"
+          width='900px'
           visible={visible}
           closable={false}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
-            <Button key="back" onClick={this.handleCancel}>
+            <Button key='back' onClick={this.handleCancel}>
               Return
             </Button>,
             <PrimaryButton
-              key="submit"
+              key='submit'
               loading={loading}
               onClick={this.handleOk}
               style={{ background: "#001328", color: "white", border: "none" }}
@@ -154,7 +151,7 @@ export default class AdditionalParameter extends Component {
         >
           <MasterLevelForm>
             <div
-              className="AdditionalAddFormHeadingContainer"
+              className='AdditionalAddFormHeadingContainer'
               style={{
                 width: "903px",
                 marginLeft: "-25px",
@@ -172,7 +169,7 @@ export default class AdditionalParameter extends Component {
               </p>
             </div>
             <Icon
-              type="close-circle"
+              type='close-circle'
               onClick={this.handleCancel}
               style={{
                 marginLeft: "270px",
@@ -186,8 +183,8 @@ export default class AdditionalParameter extends Component {
             <Row>
               <Col span={3}>
                 <Button
-                  type=""
-                  value="add more"
+                  type=''
+                  value='add more'
                   onClick={this.addClick.bind(this)}
                 >
                   Add more

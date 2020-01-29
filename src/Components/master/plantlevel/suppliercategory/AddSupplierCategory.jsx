@@ -50,17 +50,17 @@ export default class AddSupplierCategory extends Component {
           Add Category
         </PrimaryButton>
         <Modal
-          width='300px'
+          width="300px"
           visible={visible}
           closable={false}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
-            <Button key='back' onClick={this.handleCancel}>
+            <Button key="back" onClick={this.handleCancel}>
               Return
             </Button>,
             <PrimaryButton
-              key='submit'
+              key="submit"
               loading={loading}
               onClick={this.handleOk}
               style={{ background: "#001328", color: "white", border: "none" }}
@@ -78,7 +78,7 @@ export default class AddSupplierCategory extends Component {
                 Add Supplier Category
               </p>
               <Icon
-                type='close-circle'
+                type="close-circle"
                 onClick={this.handleCancel}
                 style={{
                   color: "white"
@@ -89,27 +89,36 @@ export default class AddSupplierCategory extends Component {
         >
           <MasterLevelForm>
             {/* Code */}
-            <div className='input_wrapper'>
-              <label for='code' className='label'>
-                Code
+            <div className="input_wrapper">
+              <label for="code" className="label">
+                Code:
               </label>
-              <Input id='code' name='code' placeholder='' />
+              <Input id="code" name="code" placeholder="Enter the Code" />
             </div>
 
             {/* category*/}
-            <div className='input_wrapper'>
-              <label for='user_role' className='label'>
-                Category
+            <div className="input_wrapper">
+              <label for="user_role" className="label">
+                Category:
               </label>
-              <Input id='user_role' name='user_role' placeholder='' />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter the Category"
+              />
             </div>
 
             {/* Description */}
-            <div className='input_wrapper'>
-              <label for='user_role' className='label'>
-                Description
+            <div className="input_wrapper">
+              <label for="user_role" className="label">
+                Description:
               </label>
-              <TextArea id='user_role' name='user_role' placeholder='' />
+              <TextArea
+                id="user_role"
+                name="user_role"
+                placeholder="Enter the Description"
+                style={{ width: "180px" }}
+              />
             </div>
           </MasterLevelForm>
         </Modal>

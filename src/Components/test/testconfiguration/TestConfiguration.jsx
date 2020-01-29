@@ -11,11 +11,20 @@ import { TileParagraph } from "../../styledcomponents/typography/typography";
 
 const { Option } = Select;
 
+const children = [
+  { id: 0, name: "Peliyagoda" },
+  { id: 1, name: "Trincomalee" }
+];
+
+function handleChange(value) {
+  console.log(`selected ${value}`);
+}
+
 export default class TestConfiguration extends Component {
   render() {
     return (
       <FlexContainer stepsarea style={{ marginTop: "45px" }}>
-        <MasterLevelForm style={{ width: "66%" }}>
+        <MasterLevelForm style={{ width: "70%" }}>
           <MasterLevelFormTitle
             style={{ width: "100%", color: "white", height: "70px" }}
           >
@@ -23,7 +32,10 @@ export default class TestConfiguration extends Component {
           </MasterLevelFormTitle>
           {/* <Divider style={{marginTop:'-5px'}}/> */}
 
-          <FlexContainer borderRadiused>
+          <FlexContainer
+            borderRadiused
+            style={{ justifyContent: "flex-start" }}
+          >
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
@@ -32,11 +44,10 @@ export default class TestConfiguration extends Component {
               <Input
                 id="code"
                 name="code"
-                placeholder=""
+                placeholder="Enter Codes"
                 className="input_Field"
               />
             </div>
-
             {/* First Name */}
             <div className="input_wrapper">
               <label for="firstname" className="label">
@@ -45,11 +56,10 @@ export default class TestConfiguration extends Component {
               <Input
                 id="firstname"
                 name="firstname"
-                placeholder=""
+                placeholder="Enter Prefix"
                 className="input_Field"
               />
             </div>
-
             {/* Last Name */}
             <div className="input_wrapper">
               <label for="lastname" className="label">
@@ -58,11 +68,25 @@ export default class TestConfiguration extends Component {
               <Input
                 id="lastname"
                 name="lastname"
-                placeholder=""
+                placeholder="Enter Test Name"
                 className="input_Field"
               />
             </div>
-            {/* Email */}
+
+            {/* Plant Multiselect */}
+            <div className="input_wrapper">
+              <label className="label">Plant </label>
+              <Select
+                mode="multiple"
+                style={{ width: 200 }}
+                placeholder="Select Plant"
+                onChange={handleChange}
+              >
+                {children.map(post => (
+                  <Option value={post.id}>{post.name}</Option>
+                ))}
+              </Select>
+            </div>
 
             {/* Contact No */}
             <div className="input_wrapper">
@@ -82,7 +106,6 @@ export default class TestConfiguration extends Component {
                 <Option value="trincomalee">Ratmalana</Option>
               </Select>
             </div>
-
             <div className="input_wrapper">
               <label for="contactno" className="label">
                 Main Category
@@ -100,7 +123,6 @@ export default class TestConfiguration extends Component {
                 <Option value="trincomalee">Ratmalana</Option>
               </Select>
             </div>
-
             {/* Plant Name */}
             <div className="input_wrapper">
               <label for="plant" className="label">
@@ -119,7 +141,6 @@ export default class TestConfiguration extends Component {
                 <Option value="trincomalee">Ratmalana</Option>
               </Select>
             </div>
-
             {/* Address  */}
             <div className="input_wrapper" style={{ flexBasis: "30%" }}>
               <label for="address" className="label">
@@ -133,7 +154,6 @@ export default class TestConfiguration extends Component {
                 placeholder=""
               />
             </div>
-
             <div className="input_wrapper" style={{ flexBasis: "30%" }}>
               <label for="address" className="label">
                 Procedure

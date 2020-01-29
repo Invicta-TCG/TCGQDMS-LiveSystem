@@ -7,6 +7,10 @@ import { AntTable } from "../../styledcomponents/table/AntTabl";
 
 import AdditionalParameterTitle from "./titles/AdditionalParameterTitle";
 
+const data = [{ code: "", name: "" }];
+const data1 = [{ code: "", location: "" }];
+const data2 = [{ parameter: "", unit: "" }];
+
 export default class ParameterConfiguration extends Component {
   state = {
     trial: "",
@@ -21,15 +25,15 @@ export default class ParameterConfiguration extends Component {
     const columns1 = [
       {
         title: <p style={{ color: "black" }}>Code</p>,
-        dataIndex: "id",
+        dataIndex: "code",
         width: "5%",
-        key: "id"
+        key: "code"
       },
       {
         title: <p style={{ color: "black" }}>Parameter</p>,
-        dataIndex: "date",
+        dataIndex: "parameter",
         width: "10%",
-        key: "id"
+        key: "parameter"
       },
       {
         title: <p style={{ color: "black" }}>Unit</p>,
@@ -47,15 +51,15 @@ export default class ParameterConfiguration extends Component {
     const columns2 = [
       {
         title: <p style={{ color: "black" }}>Parameter</p>,
-        dataIndex: "id",
+        dataIndex: "parameter",
         width: "8%",
-        key: "id"
+        key: "parameter"
       },
       {
         title: <p style={{ color: "black" }}>Unit</p>,
-        dataIndex: "date",
+        dataIndex: "unit",
         width: "6%",
-        key: "id"
+        key: "unit"
       },
       {
         title: <p style={{ color: "black" }}>Short Format</p>,
@@ -66,22 +70,21 @@ export default class ParameterConfiguration extends Component {
       {
         title: <p style={{ color: "black", marginLeft: "40px" }}>Action</p>,
         key: "action",
-        width: "7%",
-        render: (text, record) => <Checkbox />
+        width: "7%"
       }
     ];
     const columns3 = [
       {
         title: <p style={{ color: "black" }}>Code</p>,
-        dataIndex: "id",
+        dataIndex: "code",
         width: "10%",
-        key: "id"
+        key: "code"
       },
       {
         title: <p style={{ color: "black" }}>Location</p>,
-        dataIndex: "date",
+        dataIndex: "location",
         width: "16%",
-        key: "id"
+        key: "location"
       },
       {
         title: <p style={{ color: "black" }}>Equipment</p>,
@@ -109,24 +112,28 @@ export default class ParameterConfiguration extends Component {
       }
     ];
     return (
-      <FlexContainer style={{ justifyContent: "flex-start" }}>
+      <FlexContainer style={{ justifyContent: "center" }}>
         <AntTable
-          lowLength2
-          size={this.state.size}
-          columns={columns2}
-          title={() => <AdditionalParameterTitle />}
-        />
-        <AntTable
-          style={{ width: "310px" }}
+          style={{ width: "600px", height: "200px" }}
           size={this.state.size}
           columns={columns1}
+          dataSource={data}
           title={() => <h3>Test Parameter</h3>}
         />
         <AntTable
-          style={{ width: "550px" }}
+          style={{ width: "600px" }}
           size={this.state.size}
           columns={columns3}
+          dataSource={data1}
           title={() => <h3>Equation Parameter</h3>}
+        />
+        <AntTable
+          style={{ width: "1200px" }}
+          length
+          size={this.state.size}
+          columns={columns2}
+          dataSource={data2}
+          title={() => <AdditionalParameterTitle />}
         />
       </FlexContainer>
     );

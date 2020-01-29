@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Modal, Icon, Button } from "antd";
+import { Input, Modal, Icon, Button } from "antd";
 
 import { PrimaryButton } from "../../../styledcomponents/button/button";
 import {
@@ -90,24 +90,32 @@ export default class AddTestParameter extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter Code" />
             </div>
 
             {/* User Role */}
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Parameter
+                Parameter:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Paramter"
+              />
             </div>
 
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Unit
+                Unit:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Uint "
+              />
             </div>
           </MasterLevelForm>
         </Modal>

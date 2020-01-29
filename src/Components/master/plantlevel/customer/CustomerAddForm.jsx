@@ -7,7 +7,6 @@ import {
   MasterLevelForm
 } from "../../../styledcomponents/form/MasterLevelForms";
 
-
 export default class CustomerAddForm extends Component {
   state = {
     loading: false,
@@ -90,47 +89,54 @@ export default class CustomerAddForm extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="id" className="label">
-                ID
+                Code:
               </label>
-              <Input id="id" name="id" placeholder="" />
+              <Input id="id" name="id" placeholder="Enter the Code" />
             </div>
 
             {/* Plant Name */}
             <div className="input_wrapper">
               <label for="customer_name" className="label">
-                Customer Name
+                Customer Name:
               </label>
-              <Input id="customer_name" name="customer_name" placeholder="" />
+              <Input
+                id="customer_name"
+                name="customer_name"
+                placeholder="Enter the Custome "
+              />
             </div>
 
             {/* Place */}
             <div className="input_wrapper">
               <label for="address" className="label">
-                Address
+                Address:
               </label>
-              <Input id="address" name="address" placeholder="" />
+              <Input
+                id="address"
+                name="address"
+                placeholder="Enter the Address"
+              />
             </div>
 
             {/* T.P No */}
             <div className="input_wrapper">
               <label for="contactno" className="label">
-                Contact No
+                Contact No:
               </label>
-              <InputNumber
+              <Input
                 className="input_number"
                 id="contactno"
                 name="contactno"
-                placeholder=""
-                style={{ width: "195px" }}
+                placeholder="Enter the Contact No"
               />
             </div>
 
             {/* Description  */}
             <div className="input_wrapper">
               <label for="email" className="label">
-                Email
+                Email:
               </label>
-              <Input id="email" name="email" placeholder="" />
+              <Input id="email" name="email" placeholder="Enter the Email" />
             </div>
           </MasterLevelForm>
         </Modal>

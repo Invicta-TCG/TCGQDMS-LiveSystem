@@ -83,7 +83,7 @@ export default class ManageEquipmentParameter extends Component {
     filteredInfo = filteredInfo || {};
     const columns = [
       {
-        title: "Parameter Code",
+        title: "Code",
         dataIndex: "id",
         width: "12%",
         key: "id",
@@ -112,17 +112,7 @@ export default class ManageEquipmentParameter extends Component {
         sorter: (a, b) => a.name.length - b.name.length,
         sortOrder: sortedInfo.columnKey === "name" && sortedInfo.order
       },
-      {
-        title: "Location",
-        dataIndex: "role",
-        key: "role",
-        width: "12%",
-        filters: [],
-        filteredValue: filteredInfo.role || null,
-        onFilter: (value, record) => record.role.includes(value),
-        sorter: (a, b) => a.role.length - b.role.length,
-        sortOrder: sortedInfo.columnKey === "role" && sortedInfo.order
-      },
+
       {
         title: "Unit",
         dataIndex: "detalis",

@@ -70,10 +70,10 @@ export default class TestResults extends Component {
             />
           </div>
           <div style={{ display: "flex" }}>
-            <h3 style={{ width: "170px" }}>Reviews</h3>
+            <h3 style={{ width: "170px" }}>Comments</h3>
             <TextArea
-              id='reviews'
-              name='reviews'
+              id='comments'
+              name='comments'
               style={{ width: "150px", height: "50px" }}
             />
           </div>
@@ -87,7 +87,7 @@ export default class TestResults extends Component {
             </PrimaryButton>
             <PrimaryButton
               type='primary'
-              style={{ background: "black", outline: "none", border: "none" }}
+              style={{ background: "red", outline: "none", border: "none" }}
             >
               Reject
             </PrimaryButton>

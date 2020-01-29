@@ -91,7 +91,7 @@ export default class ManageType extends Component {
         sortOrder: sortedInfo.columnKey === "code" && sortedInfo.order
       },
       {
-        title: "Name",
+        title: " Type Name",
         dataIndex: "Name",
         key: "user",
         width: "6%",

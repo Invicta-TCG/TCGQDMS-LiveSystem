@@ -1,17 +1,5 @@
 import React, { Component } from "react";
-import {
-  Form,
-  Input,
-  InputNumber,
-  DatePicker,
-  AutoComplete,
-  Modal,
-  Icon,
-  Button,
-  Select,
-  Row,
-  Col
-} from "antd";
+import { Input, Modal, Icon, Button, Select, Row, Col } from "antd";
 import {
   MasterLevelFormTitle,
   MasterLevelForm
@@ -19,9 +7,6 @@ import {
 
 import { PrimaryButton } from "../../../styledcomponents/button/button";
 
-function onChange(date, dateString) {
-  console.log(date, dateString);
-}
 const { Option } = Select;
 export default class AddMaterialParameter extends Component {
   constructor(props) {
@@ -80,7 +65,7 @@ export default class AddMaterialParameter extends Component {
       <div key={i}>
         <Row>
           <Input
-            placeholder="ID"
+            placeholder="Code"
             name="parameter"
             value={el.parameter || ""}
             onChange={this.handleChange.bind(this, i)}
@@ -165,7 +150,6 @@ export default class AddMaterialParameter extends Component {
           Add Material Parameter
         </PrimaryButton>
         <Modal
-        
           visible={visible}
           closable={false}
           onOk={this.handleOk}
@@ -186,27 +170,24 @@ export default class AddMaterialParameter extends Component {
           width="1100px"
           title={
             <MasterLevelFormTitle>
-            <p
-              style={{
-                color: "white"
-              }}
-            >
-              Add Material Parameter
-            </p>
-            <Icon
-            type="close-circle"
-            onClick={this.handleCancel}
-            style={{
-              color: "white",
-            }}
-          />
-          </MasterLevelFormTitle>
-         
+              <p
+                style={{
+                  color: "white"
+                }}
+              >
+                Add Material Parameter
+              </p>
+              <Icon
+                type="close-circle"
+                onClick={this.handleCancel}
+                style={{
+                  color: "white"
+                }}
+              />
+            </MasterLevelFormTitle>
           }
         >
           <MasterLevelForm>
-           
-
             {this.createUI()}
 
             <Row>

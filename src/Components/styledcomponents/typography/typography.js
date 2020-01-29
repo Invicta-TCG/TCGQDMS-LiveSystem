@@ -15,3 +15,11 @@ export const TileParagraph = styled.p`
   width: 100%;
   color: white;
 `;
+
+export const Heading1 = styled.h1`
+  font-family: "Roboto";
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1.8;
+  font-size: 18px;
+`;

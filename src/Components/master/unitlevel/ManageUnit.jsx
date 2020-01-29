@@ -73,7 +73,7 @@ export default class ManageUnit extends Component {
         sortOrder: sortedInfo.columnKey === "id" && sortedInfo.order
       },
       {
-        title: "Name",
+        title: "Unit Name",
         dataIndex: "date",
         // width: "16%",
         key: "id",

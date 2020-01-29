@@ -182,17 +182,6 @@ export default class ManagePlants extends Component {
       },
 
       {
-        title: "Other Details",
-        dataIndex: "detalis",
-        key: "detalis",
-        width: "4%",
-        render: () => (
-          <a onClick={this.showModal}>
-            <Icon type="solution" />
-          </a>
-        )
-      },
-      {
         title: "Action",
         key: "action",
         width: "4%",
@@ -221,7 +210,7 @@ export default class ManagePlants extends Component {
 
     return (
       <AntTable
-      length
+        length
         title={() => <PlantMasterTitle />}
         className="plantManageTable"
         columns={columns}
@@ -229,7 +218,6 @@ export default class ManagePlants extends Component {
         onChange={this.handleChange}
         pagination={{ defaultPageSize: 4 }}
         size={this.state.size}
-     
       />
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Modal, Button, Icon, Select } from "antd";
+import { Input, Modal, Button, Icon, Select } from "antd";
 
 import { PrimaryButton } from "../../../styledcomponents/button/button";
 import {
@@ -91,9 +91,9 @@ export default class MaterialMasterAddForm extends Component {
             {/* Code */}
             <div className="input_wrapper" style={{ marginLeft: "-10px" }}>
               <label for="id" className="label">
-                Material Code
+                Code:
               </label>
-              <Input id="id" name="id" placeholder="" />
+              <Input id="id" name="id" placeholder="Enter Code " />
             </div>
 
             {/* Plant Name */}
@@ -101,38 +101,38 @@ export default class MaterialMasterAddForm extends Component {
             {/* Place */}
             <div className="input_wrapper" style={{ marginLeft: "-20px" }}>
               <label for="main_category" className="label">
-                Main Category
+                Main Category:
               </label>
               <Select
+                placeholder="Select main Category"
                 id="main_category"
                 name="main_category "
-                style={{ width: "190px" }}
-              >
-                <Option value="Main Category 1">Main Category 1</Option>
-                <Option value="Main Category 2">Main Category 2</Option>
-              </Select>
+                style={{ width: "170px" }}
+              ></Select>
             </div>
 
             {/* T.P No */}
             <div className="input_wrapper" style={{ marginLeft: "-10px" }}>
               <label for="main_category" className="label">
-                Sub Category
+                Sub Category:
               </label>
               <Select
+                placeholder="Select Sub Category"
                 id="main_category"
                 name="main_category "
-                style={{ width: "190px" }}
-              >
-                <Option value="Main Category 1">Sub Category 1</Option>
-                <Option value="Main Category 2">Sub Category 2</Option>
-              </Select>
+                style={{ width: "170px" }}
+              ></Select>
             </div>
 
             <div className="input_wrapper" style={{ marginLeft: "-10px" }}>
               <label for="customer_name" className="label">
-                Material Name
+                Material Name:
               </label>
-              <Input id="customer_name" name="customer_name" placeholder="" />
+              <Input
+                id="customer_name"
+                name="customer_name"
+                placeholder="Enter Material Name"
+              />
             </div>
 
             {/* Description  */}

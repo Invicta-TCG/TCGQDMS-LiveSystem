@@ -164,7 +164,7 @@ export default class ManageQCStaff extends Component {
         sortOrder: sortedInfo.columnKey === "role" && sortedInfo.order
       },
       {
-        title: "Role",
+        title: "Desigination",
         dataIndex: "role",
         key: "role",
         width: "6%",
@@ -195,38 +195,38 @@ export default class ManageQCStaff extends Component {
         sorter: (a, b) => a.role.length - b.role.length,
         sortOrder: sortedInfo.columnKey === "role" && sortedInfo.order
       },
-      {
-        title: "Contact No",
-        dataIndex: "contactno",
-        key: "contactno",
-        width: "9%",
-        filters: [
-          { text: "Vechical1", value: "Vechical1" },
-          { text: "Vechical2", value: " Vechical2" },
-          { text: "Vechical3", value: "Vechical3" },
-          { text: "Vechical4", value: "Vechical4" }
-        ],
-        filteredValue: filteredInfo.role || null,
-        onFilter: (value, record) => record.role.includes(value),
-        sorter: (a, b) => a.role.length - b.role.length,
-        sortOrder: sortedInfo.columnKey === "role" && sortedInfo.order
-      },
-      {
-        title: "Address",
-        dataIndex: "address",
-        key: "address",
-        width: "7%",
-        filters: [
-          { text: "Vechical1", value: "Vechical1" },
-          { text: "Vechical2", value: " Vechical2" },
-          { text: "Vechical3", value: "Vechical3" },
-          { text: "Vechical4", value: "Vechical4" }
-        ],
-        filteredValue: filteredInfo.role || null,
-        onFilter: (value, record) => record.role.includes(value),
-        sorter: (a, b) => a.role.length - b.role.length,
-        sortOrder: sortedInfo.columnKey === "role" && sortedInfo.order
-      },
+      // {
+      //   title: "Contact No",
+      //   dataIndex: "contactno",
+      //   key: "contactno",
+      //   width: "9%",
+      //   filters: [
+      //     { text: "Vechical1", value: "Vechical1" },
+      //     { text: "Vechical2", value: " Vechical2" },
+      //     { text: "Vechical3", value: "Vechical3" },
+      //     { text: "Vechical4", value: "Vechical4" }
+      //   ],
+      //   filteredValue: filteredInfo.role || null,
+      //   onFilter: (value, record) => record.role.includes(value),
+      //   sorter: (a, b) => a.role.length - b.role.length,
+      //   sortOrder: sortedInfo.columnKey === "role" && sortedInfo.order
+      // },
+      // {
+      //   title: "Address",
+      //   dataIndex: "address",
+      //   key: "address",
+      //   width: "7%",
+      //   filters: [
+      //     { text: "Vechical1", value: "Vechical1" },
+      //     { text: "Vechical2", value: " Vechical2" },
+      //     { text: "Vechical3", value: "Vechical3" },
+      //     { text: "Vechical4", value: "Vechical4" }
+      //   ],
+      //   filteredValue: filteredInfo.role || null,
+      //   onFilter: (value, record) => record.role.includes(value),
+      //   sorter: (a, b) => a.role.length - b.role.length,
+      //   sortOrder: sortedInfo.columnKey === "role" && sortedInfo.order
+      // },
 
       {
         title: "Other Details",

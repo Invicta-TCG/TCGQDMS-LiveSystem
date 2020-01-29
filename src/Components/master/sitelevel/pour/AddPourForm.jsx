@@ -7,6 +7,7 @@ import {
 } from "../../../styledcomponents/form/MasterLevelForms";
 
 import { PrimaryButton } from "../../../styledcomponents/button/button";
+import TextArea from "antd/lib/input/TextArea";
 
 const Option = Select;
 export default class AddPourForm extends Component {
@@ -92,31 +93,33 @@ export default class AddPourForm extends Component {
 
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter Code " />
             </div>
 
             <div className="input_wrapper">
               <label for="code" className="label">
-                Pour No
+                Pour No:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder=" Enter Pour No" />
             </div>
 
             <div className="input_wrapper" style={{ width: "200px" }}>
               <label for="code" className="label">
-                Project
+                Project:
               </label>
-              <Select id="code" name="code">
-                <Option value="Main Category 1">Plant</Option>
-              </Select>
+              <Select
+                id="code"
+                name="code"
+                placeholder=" Select Project"
+              ></Select>
             </div>
             <div className="input_wrapper">
               <label for="code" className="label">
-                Description
+                Description:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <TextArea id="code" name="code" placeholder="Enter Description" />
             </div>
           </MasterLevelForm>
         </Modal>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Table } from "antd";
 export const AntTable = styled(Table)`
   background: white;
@@ -23,4 +23,14 @@ export const AntTable = styled(Table)`
     width: ${props =>
       props.length ? "1200px" : props.lowLength2 ? "650px" : "800px"};
   }
+
+  ${props =>
+    props.emptyTableTestTrial &&
+    css`
+      background: none;
+      border: none;
+      outline: none;
+      box-shadow: 0.5px 0.5px 0.5px 1px rgba(0, 0, 0, 0.05);
+      height: 150px;
+    `}
 `;

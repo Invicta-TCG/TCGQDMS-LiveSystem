@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Table, Icon, Divider, Popconfirm, Modal, Button } from "antd";
+import { Table, Icon, Divider, Popconfirm, Modal } from "antd";
 import Paragraph from "antd/lib/typography/Paragraph";
 import LineChartConfig from "./element/LineChart";
 
@@ -66,7 +66,7 @@ export default class ManageGraph extends Component {
         width: "16%",
         render: (text, record) => (
           <Icon
-            type="play-circle"
+            type='play-circle'
             style={{ color: "green" }}
             onClick={this.showModal}
           />
@@ -78,19 +78,19 @@ export default class ManageGraph extends Component {
         width: "8%",
         render: (text, record) => (
           <span>
-            <a href="no url">
-              <Icon type="edit" />
+            <a href='no url'>
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
-            <a href="no url">
+            <Divider type='vertical' />
+            <a href='no url'>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a href="no url">
-                  <Icon type="delete"></Icon>
+                <a href='no url'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -111,25 +111,25 @@ export default class ManageGraph extends Component {
     ];
 
     return (
-      <div className="tablegraph">
+      <div className='tablegraph'>
         <Modal
-          title="Preview Graph"
+          title='Preview Graph'
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           style={{ borderRadius: "20px" }}
           mask={true}
-          maskClosable="true"
+          maskClosable='true'
           // okButtonProps={ghost="true"}
         >
           <LineChartConfig />
         </Modal>
         <Table
-          className="tablegraphinner"
+          className='tablegraphinner'
           columns={columns}
           dataSource={data}
           title={() => (
-            <div className="graphtitle">
+            <div className='graphtitle'>
               <Paragraph
                 style={{
                   fontFamily: "Roboto",
@@ -144,7 +144,7 @@ export default class ManageGraph extends Component {
           )}
           //   onChange={this.handleChange}
 
-          size="small"
+          size='small'
         />
       </div>
     );

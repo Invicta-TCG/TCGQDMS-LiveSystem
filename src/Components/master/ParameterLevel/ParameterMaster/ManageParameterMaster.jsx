@@ -93,7 +93,7 @@ export default class ManageParameterMaster extends Component {
         sortOrder: sortedInfo.columnKey === "code" && sortedInfo.order
       },
       {
-        title: "Name",
+        title: " Parameter Name",
         dataIndex: "Name",
         key: "user",
         width: "6%",
@@ -131,7 +131,7 @@ export default class ManageParameterMaster extends Component {
 
     return (
       <AntTable
-      length
+        length
         title={() => <ParameterTitle />}
         columns={columns}
         onChange={this.handleChange}

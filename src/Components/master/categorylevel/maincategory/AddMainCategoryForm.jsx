@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Modal, Icon, Select, Button } from "antd";
+import { Input, Modal, Icon, Select, Button } from "antd";
 
 import "./style.css";
 import { PrimaryButton } from "../../../styledcomponents/button/button";
@@ -93,31 +93,33 @@ export default class AddMainCategoryForm extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter the Code" />
             </div>
 
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Main Category
+                Main Category:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Main Category"
+              />
             </div>
 
             {/* User Role */}
             <div className="input_wrapper">
               <label for="main_category" className="label">
-                Material Type
+                Material Type:
               </label>
               <Select
+                placeholder="Select Material Type"
                 id="main_category"
                 name="main_category "
-                style={{ width: "190px" }}
-              >
-                <Option value="Main Category 1">Material Type 1</Option>
-                <Option value="Main Category 2">Material Type 2</Option>
-              </Select>
+                style={{ width: "180px" }}
+              ></Select>
             </div>
           </MasterLevelForm>
         </Modal>

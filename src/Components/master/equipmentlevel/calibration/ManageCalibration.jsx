@@ -92,6 +92,18 @@ export default class ManageCalibration extends Component {
         sorter: (a, b) => a.code - b.code,
         sortOrder: sortedInfo.columnKey === "code" && sortedInfo.order
       },
+
+      {
+        title: "Equipment Name",
+        dataIndex: "calibrated_date",
+        key: "calibrated_date",
+        width: "7%",
+        filteredValue: filteredInfo.name || null,
+        onFilter: (value, record) => record.name.includes(value),
+        sorter: (a, b) => a.user - b.user,
+        sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
+      },
+
       {
         title: "Calibrated Date",
         dataIndex: "calibrated_date",
@@ -160,18 +172,18 @@ export default class ManageCalibration extends Component {
         render: (text, record) => (
           <span>
             <a>
-              <Icon type='edit' />
+              <Icon type="edit" />
             </a>
-            <Divider type='vertical' />
+            <Divider type="vertical" />
             <a>
               <Popconfirm
-                title='Are you sure you want to Delete this?'
+                title="Are you sure you want to Delete this?"
                 icon={
-                  <Icon type='question-circle-o' style={{ color: "red" }} />
+                  <Icon type="question-circle-o" style={{ color: "red" }} />
                 }
               >
                 <a>
-                  <Icon type='delete'></Icon>
+                  <Icon type="delete"></Icon>
                 </a>
               </Popconfirm>
             </a>

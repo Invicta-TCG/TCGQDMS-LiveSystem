@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Input, DatePicker, Modal, Button, Icon } from "antd";
+import { Input, DatePicker, Modal, Button, Icon, Radio } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 
 import { PrimaryButton } from "../../../styledcomponents/button/button";
@@ -50,7 +50,7 @@ export default class AddCalibrationForm extends Component {
           Add Calibration
         </PrimaryButton>
         <Modal
-          width="330px"
+          width="500px"
           visible={visible}
           closable={false}
           onOk={this.handleOk}
@@ -93,24 +93,74 @@ export default class AddCalibrationForm extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter the Code" />
             </div>
 
             {/* User Role */}
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Date
+                Equipment Name:
               </label>
-              <DatePicker />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Equipment Name"
+              />
             </div>
 
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Description
+                {" "}
+                Calibrated Date:
               </label>
-              <TextArea id="user_role" name="user_role" placeholder="" />
+              <DatePicker />
+            </div>
+            <div className="input_wrapper">
+              <label for="user_role" className="label">
+                {" "}
+                Due Date:
+              </label>
+              <DatePicker />
+            </div>
+            <div className="input_wrapper">
+              <label for="user_role" className="label">
+                Calibrated By:
+              </label>
+              <Radio>Internal</Radio>
+              <Radio>External</Radio>
+            </div>
+            <div className="input_wrapper">
+              <label for="user_role" className="label">
+                Company:
+              </label>
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Company"
+              />
+            </div>
+            <div className="input_wrapper">
+              <label for="user_role" className="label">
+                Tester:
+              </label>
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Tester"
+              />
+            </div>
+            <div className="input_wrapper">
+              <label for="user_role" className="label">
+                Description:
+              </label>
+              <TextArea
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Description"
+                style={{ width: "180px" }}
+              />
             </div>
           </MasterLevelForm>
         </Modal>

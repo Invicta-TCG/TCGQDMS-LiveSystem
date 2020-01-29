@@ -29,6 +29,8 @@ import MaterialTest from "../../test/testtrial/MaterialTest";
 
 import Profile from "../../profile/Profile";
 import CompanyPrivilege from "../../priviledges/Privileges";
+import FPViewStatus from "../../sample/finshproduct/FPViewStatus/FPViewStatus";
+import TestResultsMaster from "../../test/testresults/TestResultsMaster";
 
 // import AddMixDesign from "../../ConfigurationLevel/MixDesign/AddMixDesign";
 // import MixDesign from "../../ConfigurationLevel/MixDesign/AddMixDesign";
@@ -72,10 +74,18 @@ class RouterContent extends React.Component {
                 <CategoryMaster />
               </Route>
 
+              {/* <Route exact path="/finalproduct">
+                <FinalProduct />
+              </Route> */}
+              {/* <Route exact path="/rawmaterial">
+                <RawMaterialHome />
+              </Route> */}
               <Route exact path='/master/materiallevel'>
                 <MaterialMaster />
               </Route>
-           
+              {/* <Route  exact path="/MixDesign">
+              <MixDesign/>
+             </Route> */}
 
               <Route exact path='/master/sitelevel'>
                 <SiteMaster />
@@ -113,6 +123,9 @@ class RouterContent extends React.Component {
               <Route exact path='/samples/incoming'>
                 <SampleMaster />
               </Route>
+              <Route exact path='/samples/viewtest'>
+                <FPViewStatus />
+              </Route>
 
               {/* Test Trial */}
               <Route exact path='/test/testtrial'>
@@ -126,6 +139,11 @@ class RouterContent extends React.Component {
                 path='/matrialtest/:sampleId'
                 component={MaterialTest}
               />
+
+              {/* Test Reports and Results */}
+              <Route exact path='/testreport'>
+                <TestResultsMaster />
+              </Route>
 
               {/* Profile */}
               <Route exact path='/profile'>

@@ -34,7 +34,7 @@ export default class AddFinishProduct extends Component {
     console.log(this.props.screen);
   }
   render() {
-    const { visible, loading } = this.state;
+    const { visible } = this.state;
     return (
       <div>
         <PrimaryButton
@@ -92,65 +92,78 @@ export default class AddFinishProduct extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter Code " />
             </div>
 
             <div className="input_wrapper">
               <label for="material" className="label">
-                Customer Name
+                Customer Name:
               </label>
-              <Select id="material" name="material " style={{ width: "180px" }}>
-                <Option value="Material">Customer Name</Option>
-              </Select>
+              <Select
+                placeholder="Enter Customer Name "
+                id="material"
+                name="material "
+                style={{ width: "180px" }}
+              ></Select>
             </div>
 
             <div className="input_wrapper">
               <label for="material" className="label">
-                Sample Size
+                Sample Size:
               </label>
-              <Select id="material" name="material " style={{ width: "180px" }}>
-                <Option value="Material">Sample Size</Option>
-              </Select>
+              {/* <Select
+                placeholder="Sample Size"
+                id="material"
+                name="material "
+                style={{ width: "180px" }}
+              ></Select> */}
+              <Input id="code" name="code" placeholder="Enter Sample Size " />
             </div>
 
             <div className="input_wrapper">
               <label for="material" className="label">
-                Project Name
+                Project Name:
               </label>
-              <Select id="material" name="material " style={{ width: "180px" }}>
-                <Option value="Material">Project Name</Option>
-              </Select>
+              <Select
+                placeholder="Select Projet Name"
+                id="material"
+                name="material "
+                style={{ width: "180px" }}
+              ></Select>
             </div>
 
             <div className="input_wrapper">
               <label for="code" className="label">
-                Date
+                Date:
               </label>
-              <DatePicker id="code" name="code" placeholder="" />
+              <DatePicker id="code" name="code" placeholder="Select Date" />
             </div>
             <div className="input_wrapper">
               <label for="code" className="label">
-                Time
+                Enter Batch Time:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Select Batch Time" />
             </div>
 
             <div className="input_wrapper">
               <label for="code" className="label">
-                Work Order No
+                Work Order No:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter Work Order No" />
             </div>
 
             <div className="input_wrapper">
               <label for="material" className="label">
-                Trial Staus
+                Plant:
               </label>
-              <Select id="material" name="material " style={{ width: "180px" }}>
-                <Option value="Material">Status</Option>
-              </Select>
+              <Select
+                placeholder="Select Plant"
+                id="material"
+                name="material "
+                style={{ width: "180px" }}
+              ></Select>
             </div>
           </MasterLevelForm>
         </Modal>

@@ -9,7 +9,6 @@ import {
 import TextArea from "antd/lib/input/TextArea";
 
 export default class AddProcessSample extends Component {
-
   state = {
     loading: false,
     visible: false
@@ -37,7 +36,7 @@ export default class AddProcessSample extends Component {
   }
 
   render() {
-    const { visible, loading } = this.state;
+    const { visible } = this.state;
 
     return (
       <div>
@@ -92,43 +91,57 @@ export default class AddProcessSample extends Component {
             </MasterLevelFormTitle>
           }
         >
-
           <MasterLevelForm>
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
-                  </label>
-              <Input className="inputProcessfield" id="code" name="code" placeholder="Code" />
+                Code:
+              </label>
+              <Input
+                className="inputProcessfield"
+                id="code"
+                name="code"
+                placeholder="Enter Code "
+              />
             </div>
 
             {/* Plant Name */}
             <div className="input_wrapper">
               <label for="process_name" className="label">
-                Name
-                  </label>
-              <Input className="inputProcessfield" id="process_name" name="process_name" placeholder="process_name" />
+                Name:
+              </label>
+              <Input
+                className="inputProcessfield"
+                id="process_name"
+                name="process_name"
+                placeholder="Enter Name"
+              />
             </div>
 
             {/* Place */}
             <div className="input_wrapper">
               <label for="raw_material" className="label">
-                Raw Material
-                  </label>
-              <Select className="inputProcessfield" id="raw_material" name="raw_material" placeholder=" Raw Material" style={{ width: "180px" }} />
-
+                Raw Material:
+              </label>
+              <Select
+                className="inputProcessfield"
+                id="raw_material"
+                name="raw_material"
+                placeholder=" Enter RawMaterial"
+                style={{ width: "180px" }}
+              />
             </div>
 
             {/* T.P No */}
             <div className="input_wrapper">
               <label for="plant" className="label">
-                Plant
-                  </label>
+                Plant:
+              </label>
               <Select
                 className="inputProcessfield"
                 id="plant"
                 name="plant"
-                placeholder="plant "
+                placeholder="Select Plant "
                 style={{ width: "180px" }}
               />
             </div>
@@ -136,11 +149,15 @@ export default class AddProcessSample extends Component {
             {/* Description  */}
             <div className="input_wrapper">
               <label for="description" className="label">
-                Description
+                Description:
               </label>
-              <TextArea id="description" name="description" placeholder="Description" style={{ width: "410px" }} />
+              <TextArea
+                id="description"
+                name="description"
+                placeholder=" Enter Description"
+                style={{ width: "410px" }}
+              />
             </div>
-
           </MasterLevelForm>
         </Modal>
       </div>

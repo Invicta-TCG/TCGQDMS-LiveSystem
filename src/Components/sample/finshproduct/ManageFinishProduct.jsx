@@ -177,18 +177,18 @@ export default class ManageFinishProduct extends Component {
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
                 <a>
-                  <Icon type="delete"></Icon>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>

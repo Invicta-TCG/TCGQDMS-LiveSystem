@@ -96,7 +96,7 @@ export default class ManageSampleCategory extends Component {
         title: "Code",
         dataIndex: "code",
         key: "code",
-        width: "3%",
+        width: "5%",
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }

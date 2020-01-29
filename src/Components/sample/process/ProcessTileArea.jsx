@@ -1,47 +1,47 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Icon } from "antd";
 import BasicCard from "../../../styledcomponents/card/BasicCard";
-
-
+import {
+  TileArea,
+  TileAreaAction,
+  TileAreaText
+} from "../../styledcomponents/card/TileArea";
 
 export default class ProcessTileArea extends Component {
   render() {
     return (
-      <div className="process_tiles_area">
+      <TileArea>
         <BasicCard
           finalproduct
-          size="small"
-          className="process_basic_card"
+          size='small'
           hoverable={true}
-        //   onClick={this.statusChange1}
+          //   onClick={this.statusChange1}
         >
-          <div className="text_area"> Add Sample</div>
-          <div className="action_area">
+          <TileAreaText>Add Sample</TileAreaText>
+          <TileAreaAction>
             <Icon
               filled
-              type="plus"
+              type='plus'
               style={{ color: "red", fontSize: "22px" }}
             />
-          </div>
+          </TileAreaAction>
         </BasicCard>
         <BasicCard
           finalproduct
-          size="small"
-          className="process_basic_card"
+          size='small'
           hoverable={true}
-        //   onClick={this.statusChange2}
+          //   onClick={this.statusChange2}
         >
-          <div className="text_area"> Import From Excel</div>
-          <div className="action_area">
+          <TileAreaText> Import From Excel</TileAreaText>
+          <TileAreaAction>
             <Icon
               filled
-              type="plus"
+              type='plus'
               style={{ color: "red", fontSize: "22px" }}
             />
-          </div>
+          </TileAreaAction>
         </BasicCard>
-
-      </div>
-    )
+      </TileArea>
+    );
   }
 }

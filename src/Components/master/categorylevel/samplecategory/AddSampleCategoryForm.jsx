@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Modal, Icon, Button } from "antd";
+import { Input, Modal, Icon, Button } from "antd";
 
 import "./style.css";
 import { PrimaryButton } from "../../../styledcomponents/button/button";
@@ -7,6 +7,7 @@ import {
   MasterLevelFormTitle,
   MasterLevelForm
 } from "../../../styledcomponents/form/MasterLevelForms";
+import TextArea from "antd/lib/input/TextArea";
 
 export default class AddSampleCategory extends Component {
   state = {
@@ -91,24 +92,33 @@ export default class AddSampleCategory extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter the Code" />
             </div>
 
             {/* User Role */}
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Sample Category
+                Sample Category:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Sample Category"
+              />
             </div>
 
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Description
+                Description:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <TextArea
+                id="user_role"
+                name="user_role"
+                placeholder="Enter Description"
+                style={{ width: "180px" }}
+              />
             </div>
           </MasterLevelForm>
         </Modal>

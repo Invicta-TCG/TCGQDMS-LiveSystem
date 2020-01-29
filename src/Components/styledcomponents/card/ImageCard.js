@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import theme from "../../../theme";
 
 //images
 // import Material from "../../../assets/material2.jpg";
@@ -26,6 +25,7 @@ import Reports from "../../../assets/reports.png";
 import ImportFromExcel from "../../../assets/excelimport.png";
 import Accounts from "../../../assets/accounts.png";
 import Configuration from "../../../assets/homescreen/configurationedited.png";
+import TestTrial from "../../../assets/homescreen/testtrial.png";
 
 const size = {
   mobileS: "320px",
@@ -80,6 +80,13 @@ export const ImageCard = styled.div`
       props.testing &&
       css`
         background: url(${Lab});
+        background-size: cover;
+      `}
+    
+    ${props =>
+      props.testTrial &&
+      css`
+        background: url(${TestTrial});
         background-size: cover;
       `}
 

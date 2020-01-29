@@ -8,13 +8,12 @@ export const PrimaryButton = styled(Button)`
     css`
       border-radius: "0.1em";
       box-shadow: "20px 20px 1px 1px";
-      border-color: ${theme.colors.black};
       border: none;
+      outline: none;
 
       &:hover {
-        outline-color: ${theme.colors.black};
         color: ${theme.colors.black};
-        border-color: ${theme.colors.black};
+        outline: none
         border: none;
       }
     `}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Input, Modal, Icon, Button } from "antd";
+import { Input, Modal, Icon, Button } from "antd";
 
 import { PrimaryButton } from "../../../styledcomponents/button/button";
 import {
@@ -49,7 +49,7 @@ export default class AddEquipmentParameter extends Component {
           Add Equipment Parameter
         </PrimaryButton>
         <Modal
-          width="260px"
+          width="500px"
           visible={visible}
           closable={false}
           onOk={this.handleOk}
@@ -74,7 +74,7 @@ export default class AddEquipmentParameter extends Component {
                   color: "white"
                 }}
               >
-                 Add Equipment Parameter
+                Add Equipment Parameter
               </p>
               <Icon
                 type="close-circle"
@@ -90,33 +90,44 @@ export default class AddEquipmentParameter extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter the Code" />
             </div>
 
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Equipment
+                Equipment:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter the Equipment"
+              />
             </div>
 
             {/* User Role */}
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Parameter
+                Parameter:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter the Parameter"
+              />
             </div>
 
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                Unit
+                Unit:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter the Unit"
+              />
             </div>
-          
           </MasterLevelForm>
         </Modal>
       </div>

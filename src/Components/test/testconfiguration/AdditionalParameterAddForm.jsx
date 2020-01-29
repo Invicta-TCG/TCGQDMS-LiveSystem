@@ -54,17 +54,17 @@ export default class AdditionalParameterAddForm extends Component {
           Add Additional Parameter
         </PrimaryButton>
         <Modal
-          width='400px'
+          width="400px"
           visible={visible}
           closable={false}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
-            <Button key='back' onClick={this.handleCancel}>
+            <Button key="back" onClick={this.handleCancel}>
               Return
             </Button>,
             <PrimaryButton
-              key='submit'
+              key="submit"
               loading={loading}
               onClick={this.handleOk}
               style={{ background: "#001328", color: "white", border: "none" }}
@@ -82,7 +82,7 @@ export default class AdditionalParameterAddForm extends Component {
                 Add Additional Parameter
               </p>
               <Icon
-                type='close-circle'
+                type="close-circle"
                 onClick={this.handleCancel}
                 style={{
                   color: "white"
@@ -93,74 +93,74 @@ export default class AdditionalParameterAddForm extends Component {
         >
           <MasterLevelForm>
             {/* Code */}
-            <div className='input_wrapper'>
+            <div className="input_wrapper">
               {/* <label for="code" className="label">
                 Parameter
               </label> */}
               <Input
-                id='code'
+                id="code"
                 style={{ width: "180px" }}
-                name='code'
-                placeholder='Parameter'
+                name="code"
+                placeholder="Parameter"
               />
             </div>
 
             {/* Plant Name */}
-            <div className='input_wrapper'>
+            <div className="input_wrapper">
               {/* <label for="plant" className="label">
                 Unit
               </label> */}
               <Select
                 showSearch
                 style={{ width: "180px" }}
-                placeholder='Select a Unit'
-                optionFilterProp='children'
+                placeholder="Select a Unit"
+                optionFilterProp="children"
                 filterOption={(input, option) =>
                   option.props.children
                     .toLowerCase()
                     .indexOf(input.toLowerCase()) >= 0
                 }
               >
-                <Option value='peliyagoda'>Peliyagoda</Option>
-                <Option value='jaffna'>Jaffna</Option>
-                <Option value='trincomalee'>Trincomalee</Option>
-                <Option value='trincomalee'>Ratmalana</Option>
+                <Option value="peliyagoda">Peliyagoda</Option>
+                <Option value="jaffna">Jaffna</Option>
+                <Option value="trincomalee">Trincomalee</Option>
+                <Option value="trincomalee">Ratmalana</Option>
               </Select>
             </div>
 
             {/* First Name */}
-            <div className='input_wrapper'>
+            <div className="input_wrapper">
               {/* <label for="firstname" className="label">
                Short Format
               </label> */}
               <Select
                 showSearch
                 style={{ width: "180px" }}
-                placeholder='Select a  ShortFormat '
-                optionFilterProp='children'
+                placeholder="Select a  ShortFormat "
+                optionFilterProp="children"
                 filterOption={(input, option) =>
                   option.props.children
                     .toLowerCase()
                     .indexOf(input.toLowerCase()) >= 0
                 }
               >
-                <Option value='peliyagoda'>Peliyagoda</Option>
-                <Option value='jaffna'>Jaffna</Option>
-                <Option value='trincomalee'>Trincomalee</Option>
-                <Option value='trincomalee'>Ratmalana</Option>
+                <Option value="peliyagoda">Peliyagoda</Option>
+                <Option value="jaffna">Jaffna</Option>
+                <Option value="trincomalee">Trincomalee</Option>
+                <Option value="trincomalee">Ratmalana</Option>
               </Select>
             </div>
 
             {/* Last Name */}
-            <div className='input_wrapper'>
+            <div className="input_wrapper">
               {/* <label for="lastname" className="label">
               Trial
               </label> */}
               <Select
                 showSearch
                 style={{ width: "180px" }}
-                placeholder='Select a Plant'
-                optionFilterProp='children'
+                placeholder="Select a Plant"
+                optionFilterProp="children"
                 onChange={this.onChangeTrail}
                 filterOption={(input, option) =>
                   option.props.children
@@ -168,12 +168,12 @@ export default class AdditionalParameterAddForm extends Component {
                     .indexOf(input.toLowerCase()) >= 0
                 }
               >
-                <Option value='Test'>Test </Option>
-                <Option value='Config'>Configuration</Option>
+                <Option value="Test">Test </Option>
+                <Option value="Config">Configuration</Option>
               </Select>
             </div>
             {this.state.trial === "Test" ? (
-              <div className='input_wrapper'>
+              <div className="input_wrapper">
                 {/* <label for="lastname" className="label">
               Value
               </label>
@@ -181,7 +181,7 @@ export default class AdditionalParameterAddForm extends Component {
                 <InputGroup compact>
                   <Input
                     style={{ width: 80, textAlign: "center" }}
-                    placeholder='Minimum'
+                    placeholder="Minimum"
                   />
                   <Input
                     style={{
@@ -190,7 +190,7 @@ export default class AdditionalParameterAddForm extends Component {
                       pointerEvents: "none",
                       backgroundColor: "#fff"
                     }}
-                    placeholder='~'
+                    placeholder="~"
                     disabled
                   />
                   <Input
@@ -199,7 +199,7 @@ export default class AdditionalParameterAddForm extends Component {
                       textAlign: "center",
                       borderLeft: 0
                     }}
-                    placeholder='Maximum'
+                    placeholder="Maximum"
                   />
                 </InputGroup>
               </div>

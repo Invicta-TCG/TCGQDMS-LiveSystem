@@ -34,7 +34,7 @@ export default class AddIncoming extends Component {
     console.log(this.props.screen);
   }
   render() {
-    const { visible, loading } = this.state;
+    const { visible } = this.state;
     return (
       <div>
         <PrimaryButton
@@ -91,69 +91,70 @@ export default class AddIncoming extends Component {
           <MasterLevelForm unalignedform>
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="Code" />
+              <Input id="code" name="code" placeholder="Enter Code" />
             </div>
 
             {/* Plant Name */}
             <div className="input_wrapper">
               <label for="supplier_name" className="label">
-                Supplier Name
+                Supplier Name:
               </label>
               <Select
                 className="inputfield"
                 id="supplier_name"
                 name="supplier_name"
-                placeholder="Supplier_name name"
-                style={{ width: "195px" }}
+                placeholder="Enter Supplier Name"
+                style={{ width: "170px" }}
               />
             </div>
 
             {/* Place */}
             <div className="input_wrapper">
               <label for="raw_material" className="label">
-                Raw Material
+                Raw Material:
               </label>
               <Select
                 id="raw_material"
                 name="raw_material"
-                placeholder=" Raw Material"
-                style={{ width: "195px" }}
+                placeholder="Enter Raw Material"
+                style={{ width: "170px" }}
               />
             </div>
 
             {/* T.P No */}
             <div className="input_wrapper">
               <label for=" delivered_date" className="label">
-                Delivered Date
+                Delivered Date:
               </label>
               <DatePicker
-              //   onChange={onChange}
+                placeholder="Select Date"
+                //   onChange={onChange}
               />
             </div>
 
             {/* Description  */}
             <div className="input_wrapper">
               <label for="vechical_no" className="label">
-                Vechical No
+                Vechical No:
               </label>
               <Input
                 id="vechical_no"
                 name="vechical_no"
-                placeholder="Vechical No"
+                placeholder="Enter Vechicle No "
               />
             </div>
 
             <div className="input_wrapper">
               <label for="description" className="label">
-                Description
+                Description:
               </label>
               <TextArea
                 id="description"
                 name="description"
-                placeholder="Description"
-                style={{ width: "200px" }}
+                placeholder=" Enter Description"
+                style={{ width: "180px" }}
               />
             </div>
           </MasterLevelForm>

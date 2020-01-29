@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
-import { Pagination, Popconfirm, Divider, Icon } from "antd";
+import { Popconfirm, Divider, Icon } from "antd";
 import ManagePourMasterTitle from "../title/ManagePourMasterTitle";
 import { AntTable } from "../../../styledcomponents/table/AntTabl";
 const data = [];

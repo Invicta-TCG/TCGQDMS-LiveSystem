@@ -1,6 +1,7 @@
 const colors = {
   white: "#ffff",
-  black: "black"
+  black: "black",
+  primary: "#001422"
 };
 
 const fonts = {

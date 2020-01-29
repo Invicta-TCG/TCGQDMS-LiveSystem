@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import theme from "../../../theme";
+import styled from "styled-components";
+
 import { Input } from "antd";
 
 export const SmallInput = styled(Input).attrs({

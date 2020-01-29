@@ -84,7 +84,7 @@ export default class ManageSupplier extends Component {
     filteredInfo = filteredInfo || {};
     const columns = [
       {
-        title: "ID",
+        title: "Code",
         dataIndex: "id",
         key: "id",
         width: "3%",
@@ -97,6 +97,16 @@ export default class ManageSupplier extends Component {
         sorter: (a, b) => a.code - b.code,
         sortOrder: sortedInfo.columnKey === "code" && sortedInfo.order
       },
+      {
+        title: "Supplier Name",
+        dataIndex: "supplier_name",
+        key: "supplier_name",
+        width: "7%",
+        filteredValue: filteredInfo.name || null,
+        onFilter: (value, record) => record.name.includes(value),
+        sorter: (a, b) => a.user - b.user,
+        sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
+      },
 
       {
         title: "Supplier Category",
@@ -108,21 +118,12 @@ export default class ManageSupplier extends Component {
         sorter: (a, b) => a.user - b.user,
         sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
       },
+
       {
         title: "Company",
         dataIndex: "company",
         key: "company",
         width: "5%",
-        filteredValue: filteredInfo.name || null,
-        onFilter: (value, record) => record.name.includes(value),
-        sorter: (a, b) => a.user - b.user,
-        sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
-      },
-      {
-        title: "Supplier Name",
-        dataIndex: "supplier_name",
-        key: "supplier_name",
-        width: "7%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -165,18 +166,18 @@ export default class ManageSupplier extends Component {
         render: (text, record) => (
           <span>
             <a>
-              <Icon type='edit' />
+              <Icon type="edit" />
             </a>
-            <Divider type='vertical' />
+            <Divider type="vertical" />
             <a>
               <Popconfirm
-                title='Are you sure you want to Delete this?'
+                title="Are you sure you want to Delete this?"
                 icon={
-                  <Icon type='question-circle-o' style={{ color: "red" }} />
+                  <Icon type="question-circle-o" style={{ color: "red" }} />
                 }
               >
                 <a>
-                  <Icon type='delete'></Icon>
+                  <Icon type="delete"></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -188,7 +189,7 @@ export default class ManageSupplier extends Component {
       <AntTable
         length
         title={() => <SupplierMasterTitle />}
-        className='plantManageTable'
+        className="plantManageTable"
         columns={columns}
         // dataSource={data}
         onChange={this.handleChange}

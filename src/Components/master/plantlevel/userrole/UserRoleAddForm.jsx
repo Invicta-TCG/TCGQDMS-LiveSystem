@@ -95,27 +95,35 @@ export default class UserRoleAddForm extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter the Code" />
             </div>
 
             {/* User Role */}
             <div className="input_wrapper">
               <label for="user_role" className="label">
-                User Role
+                Desigination:
               </label>
-              <Input id="user_role" name="user_role" placeholder="" />
+              <Input
+                id="user_role"
+                name="user_role"
+                placeholder="Enter the Desigination"
+              />
             </div>
             <div className="input_wrapper">
               <label
                 for="user_role"
                 className="label"
-                style={{ width: "200px" }}
+                style={{ width: "180px" }}
               >
-                Description
+                Description:
               </label>
-              <TextArea id="user_role" name="user_role" placeholder="" />
+              <TextArea
+                id="user_role"
+                name="user_role"
+                placeholder="Enter the Description"
+              />
             </div>
           </MasterLevelForm>
         </Modal>

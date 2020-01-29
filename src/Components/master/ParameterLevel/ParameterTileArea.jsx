@@ -97,7 +97,7 @@ class ParameterTileArea extends Component {
           </TileAreaAction>
         </BasicCard>
 
-        <BasicCard
+        {/* <BasicCard
           finalproduct
           tileareacard
           size="small"
@@ -113,7 +113,7 @@ class ParameterTileArea extends Component {
               style={{ color: "red", fontSize: "22px" }}
             />
           </TileAreaAction>
-        </BasicCard>
+        </BasicCard> */}
       </TileArea>
     );
   }

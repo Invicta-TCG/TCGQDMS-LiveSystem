@@ -295,20 +295,20 @@ const data = [
 export default class CompanyPrivilege extends Component {
   render() {
     const { handleSwitchChange } = this.props;
-    const routes = [
-      {
-        path: "index",
-        breadcrumbName: "Settings"
-      },
-      {
-        path: "first",
-        breadcrumbName: "Privilege"
-      },
-      {
-        path: "second",
-        breadcrumbName: "Company Privilege"
-      }
-    ];
+    // const routes = [
+    //   {
+    //     path: "index",
+    //     breadcrumbName: "Settings"
+    //   },
+    //   {
+    //     path: "first",
+    //     breadcrumbName: "Privilege"
+    //   },
+    //   {
+    //     path: "second",
+    //     breadcrumbName: "Company Privilege"
+    //   }
+    // ];
     return (
       <React.Fragment>
         <div

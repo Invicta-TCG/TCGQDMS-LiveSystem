@@ -6,6 +6,7 @@ import TextArea from "antd/lib/input/TextArea";
 import { AntTable } from "../../styledcomponents/table/AntTabl";
 import { TestTrialTableTitles } from "./title/TestTrialTableTitles";
 import { MasterLevelForm } from "../../styledcomponents/form/MasterLevelForms";
+import { PrimaryButton } from "../../styledcomponents/button/button";
 
 const data1 = [
   {
@@ -99,56 +100,56 @@ export default class TestTrialResult extends Component {
       }
     ];
     return (
-      <FlexContainer home style={{ marginTop: "-20px" }}>
+      <FlexContainer home style={{ marginTop: "-20px", background: "white" }}>
         <AntTable
-          lowHeight
-          lowLength2
-          title={() => TestTrialTableTitles("Material Parameter with Value")}
+          medium
+          emptyTableTestTrial
           columns={columns1}
           dataSource={data1}
           onChange={this.handleChange}
           pagination={false}
           //   scroll={{ y: 100 | true }}
           size='small'
-        />
-
-        <AntTable
-          lowLength2
-          lowHeight
-          title={() => TestTrialTableTitles("Equipment Parameter with Value")}
-          columns={columns2}
-          dataSource={data2}
-          onChange={this.handleChange}
-          pagination={false}
-          size='small'
-        />
-
-        <AntTable
-          lowLength2
-          lowHeight
-          title={() => TestTrialTableTitles("Additional Parameter with Value")}
-          columns={columns2}
-          dataSource={data2}
-          onChange={this.handleChange}
-          pagination={false}
-          size='small'
+          title={() => <h4>Material Related Parameter</h4>}
         />
 
         <AntTable
           medium
-          lowHeight
-          title={() => TestTrialTableTitles("Test Parameter with Value")}
+          emptyTableTestTrial
+          columns={columns2}
+          dataSource={data2}
+          onChange={this.handleChange}
+          pagination={false}
+          size='small'
+          title={() => <h4>Additional Parameter With Value</h4>}
+        />
+
+        <AntTable
+          medium
+          emptyTableTestTrial
+          columns={columns2}
+          dataSource={data2}
+          onChange={this.handleChange}
+          pagination={false}
+          size='small'
+          title={() => <h4>Equipment Related Parameter</h4>}
+        />
+
+        <AntTable
+          medium
+          emptyTableTestTrial
           columns={columns4}
           onChange={this.handleChange}
           size='small'
           dataSource={data3}
           pagination={false}
+          title={() => <h4>Test Related Parameter</h4>}
         />
 
         <MasterLevelForm
           filled
           style={{
-            width: "600px",
+            width: "100%",
             marginTop: "20px",
             marginLeft: "15px",
             borderRadius: "15px",
@@ -157,16 +158,21 @@ export default class TestTrialResult extends Component {
         >
           {TestTrialTableTitles("Results")}
 
-          <FlexContainer normal column>
-            <FlexContainer home style={{ marginLeft: "30px" }}>
+          <FlexContainer normal>
+            <FlexContainer home>
               <div className='input_wrapper'>
                 <label for='code' className='label'>
                   Average Value
                 </label>
                 <Input id='code' name='code' placeholder='' />
               </div>
-              <div style={{ marginTop: "44px", marginLeft: "10px" }}>
-                <Button>Calculate</Button>
+              <div style={{ marginTop: "60px", marginLeft: "10px" }}>
+                <PrimaryButton
+                  style={{ background: "#001422", border: "none" }}
+                  type='primary'
+                >
+                  Calculate
+                </PrimaryButton>
               </div>
             </FlexContainer>
             <FlexContainer normal>
@@ -176,11 +182,45 @@ export default class TestTrialResult extends Component {
                 </label>
                 <Input id='code' name='code' placeholder='' />
               </div>
+              <div style={{ marginTop: "60px", marginLeft: "10px" }}>
+                <PrimaryButton
+                  style={{ background: "green", border: "none" }}
+                  type='primary'
+                >
+                  Pass
+                </PrimaryButton>
+              </div>
+              <div style={{ marginTop: "60px", marginLeft: "10px" }}>
+                <PrimaryButton
+                  style={{ background: "red", border: "none" }}
+                  type='primary'
+                >
+                  Fail
+                </PrimaryButton>
+              </div>
               <div className='input_wrapper'>
                 <label for='code' className='label'>
                   Description
                 </label>
                 <TextArea id='code' name='code' placeholder='' cols={40} />
+              </div>
+            </FlexContainer>
+            <FlexContainer normal style={{ marginTop: "50px" }}>
+              <div style={{}}>
+                <PrimaryButton
+                  style={{ background: "#001422", border: "none" }}
+                  type='primary'
+                >
+                  Submit
+                </PrimaryButton>
+              </div>
+              <div style={{ marginLeft: "10px" }}>
+                <PrimaryButton
+                  style={{ background: "#001422", border: "none" }}
+                  type='primary'
+                >
+                  Print
+                </PrimaryButton>
               </div>
             </FlexContainer>
           </FlexContainer>

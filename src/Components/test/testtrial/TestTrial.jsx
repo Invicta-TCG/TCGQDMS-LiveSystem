@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
 import { AntTable } from "../../styledcomponents/table/AntTabl";
 import history from "../../../Components/Constant/history";
@@ -76,7 +77,10 @@ function testConfig(record, e) {
 
 export function MaterialsType(data) {
   return (
-    <FlexContainer normal style={{ width: "50%" }}>
+    <FlexContainer
+      normal
+      style={{ width: "50%", marginLeft: "20px", marginBottom: "-10px" }}
+    >
       {data.map((post, index) => {
         return (
           <PrimaryButton
@@ -94,31 +98,28 @@ export function MaterialsType(data) {
 
 export function ManageTest(data, title) {
   return (
-    <div>
-      <AntTable
-        length
-        title={() => (
-          <div style={{ height: "20px" }}>
-            <p style={styleObj}>{title}</p>
-          </div>
-        )}
-        columns={columns}
-        dataSource={data}
-        style={{ background: "white" }}
-        size='small'
-        onRow={(record, rowIndex) => {
-          return {
-            // onClick: event => {testConfig(record)}, // click row
-            onDoubleClick: event => {
-              testConfig(record);
-            } // double click row
-            // onContextMenu: event => {}, // right button click row
-            // onMouseEnter: event => {}, // mouse enter row
-            // onMouseLeave: event => {}, // mouse leave row
-          };
-        }}
-      />
-    </div>
+    <AntTable
+      title={() => (
+        <div style={{ height: "20px" }}>
+          <p style={styleObj}>{title}</p>
+        </div>
+      )}
+      columns={columns}
+      dataSource={data}
+      style={{ background: "white", width: "1300px", marginTop: "-10px" }}
+      size='small'
+      onRow={(record, rowIndex) => {
+        return {
+          // onClick: event => {testConfig(record)}, // click row
+          onDoubleClick: event => {
+            testConfig(record);
+          } // double click row
+          // onContextMenu: event => {}, // right button click row
+          // onMouseEnter: event => {}, // mouse enter row
+          // onMouseLeave: event => {}, // mouse leave row
+        };
+      }}
+    />
   );
 }
 const styleObj = {

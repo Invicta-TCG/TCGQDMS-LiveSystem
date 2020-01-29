@@ -7,7 +7,6 @@ import ParameterConfig from "./ParameterConfiguration";
 import EquationConfiguration from "./EquationConfiguration";
 import GraphConfiguration from "./GraphConfiguration";
 import ManageTestConfiguration from "./ManageTestConfiguration";
-import { FlexContainer } from "../../styledcomponents/container/FlexGrid";
 
 const { Step } = Steps;
 
@@ -26,12 +25,16 @@ const steps = [
   },
   {
     title: "fourth",
-    // content: <GraphConfiguration />
+    content: <GraphConfiguration />
   },
   {
     title: "Last",
     content: <ManageTestConfiguration />
   }
+  // {
+  //   title: "Last",
+  //   content: <PickListDemo />
+  // }
 ];
 
 export default class TestConfigurationMaster extends Component {

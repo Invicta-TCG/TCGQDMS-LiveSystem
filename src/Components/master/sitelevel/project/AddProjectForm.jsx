@@ -91,25 +91,55 @@ export default class AddProjectForm extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter Code" />
             </div>
 
             <div className="input_wrapper">
               <label for="project_name" className="label">
-                Project Name
+                Project Name:
               </label>
-              <Input id="project_name" name="project_name" placeholder="" />
+              <Input
+                id="project_name"
+                name="project_name"
+                placeholder="Enter Project Name"
+              />
             </div>
 
             <div className="input_wrapper">
               <label for="customer" className="label">
                 Customer
               </label>
-              <Select id="customer" name="customer " style={{ width: "190px" }}>
-                <Option value="Main Category 1">Customer</Option>
-              </Select>
+              <Select
+                id="customer"
+                placeholder="Select Customer"
+                name="customer "
+                style={{ width: "180px" }}
+              ></Select>
+            </div>
+
+            <div className="input_wrapper">
+              <label for="customer" className="label">
+                Contact Person
+              </label>
+              <Select
+                id="customer"
+                placeholder="Select Contact Person"
+                name="customer "
+                style={{ width: "180px" }}
+              ></Select>
+            </div>
+            <div className="input_wrapper">
+              <label for="customer" className="label">
+                Contact No
+              </label>
+              <Select
+                id="customer"
+                placeholder="Select Contact No"
+                name="customer "
+                style={{ width: "180px" }}
+              ></Select>
             </div>
 
             <div className="input_wrapper">
@@ -118,8 +148,9 @@ export default class AddProjectForm extends Component {
               </label>
               <Select
                 id="mix_design"
+                placeholder="Select MixDesign"
                 name="mix_design "
-                style={{ width: "190px" }}
+                style={{ width: "180px" }}
               >
                 <Option value="Main Category 1">Mix Design</Option>
               </Select>
@@ -129,18 +160,24 @@ export default class AddProjectForm extends Component {
               <label for="grade" className="label">
                 Grade
               </label>
-              <Select id="grade" name="grade " style={{ width: "190px" }}>
-                <Option value="Main Category 1">grade</Option>
-              </Select>
+              <Select
+                id="grade"
+                placeholder="Select Grade"
+                name="grade "
+                style={{ width: "180px" }}
+              ></Select>
             </div>
 
             <div className="input_wrapper">
               <label for="plant" className="label">
                 Plant
               </label>
-              <Select id="plant" name="plant " style={{ width: "190px" }}>
-                <Option value="Main Category 1">Plant</Option>
-              </Select>
+              <Select
+                id="plant"
+                placeholder="Select Plant"
+                name="plant "
+                style={{ width: "180px" }}
+              ></Select>
             </div>
           </MasterLevelForm>
         </Modal>

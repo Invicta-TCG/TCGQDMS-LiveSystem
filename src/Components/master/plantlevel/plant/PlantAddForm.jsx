@@ -94,76 +94,46 @@ export default class PlantAddForm extends Component {
             {/* Code */}
             <div className="input_wrapper">
               <label for="code" className="label">
-                Code
+                Code:
               </label>
-              <Input id="code" name="code" placeholder="" />
+              <Input id="code" name="code" placeholder="Enter the Code " />
             </div>
 
             {/* Plant Name */}
             <div className="input_wrapper">
               <label for="plant_name" className="label">
-                Plant Name
+                Plant Name:
               </label>
-              <Input id="plant_name" name="plant_name" placeholder="" />
+              <Input
+                id="plant_name"
+                name="plant_name"
+                placeholder="Enter the Plant Name"
+              />
             </div>
 
             {/* Place */}
             <div className="input_wrapper">
               <label for="plant_name" className="label">
-                Address
+                Address:
               </label>
-              <Input id="plant_name" name="plant_name" placeholder="" />
+              <Input
+                id="plant_name"
+                name="plant_name"
+                placeholder="Enter the Address "
+              />
             </div>
 
-            {/* T.P No */}
-            {/* <div className="input_plantcontactno">
-              <label for="contactno" className="label">
-                Contact No
-              </label>
-              <InputNumber
-                className="input_number"
-                id="contactno"
-                name="contactno"
-                placeholder=""
-                style={{ width: "195px" }}
-              />
-            </div> */}
             <div className="input_wrapper">
               <label for="plant_name" className="label">
-                Contact No
+                Contact No:
               </label>
-              <InputNumber
+              <Input
                 className="input_number"
                 id="contactno"
                 name="contactno"
-                placeholder=""
-                style={{ width: "195px" }}
+                placeholder="Enter the Contact No"
               />
             </div>
-
-            {/* Description  */}
-            {/* <div className="input_wrapper">
-              <label for="email" className="label">
-                Email
-              </label>
-              <Input id="email" name="email" placeholder="" />
-            </div> */}
-
-            {/* Date */}
-            {/* <div className="input_wrapper">
-              <label for="date" className="label">
-                Description
-              </label>
-              <TextArea id="date" name="date" placeholder="" />
-            </div> */}
-
-            {/* <PrimaryButton
-              type="primary"
-              style={{ background: "#001328", color: "white", border: "none" }}
-            >
-              Submit
-            </PrimaryButton> */}
-            {/* <PrimaryButton>Clear</PrimaryButton> */}
           </MasterLevelForm>
         </Modal>
       </div>
