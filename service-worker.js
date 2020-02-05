@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/TCGQDMS-LiveSystem/precache-manifest.096db0dbe735c29ccf8fbbdd12d0e281.js"
+  "/TCGQDMS-LiveSystem/precache-manifest.ae2fe98f31123733d816a55d537b02e7.js"
 );
 
 self.addEventListener('message', (event) => {
