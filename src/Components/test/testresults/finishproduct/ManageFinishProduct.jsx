@@ -90,7 +90,6 @@ export default class ManageFinishProduct extends Component {
         title: "Code",
         dataIndex: "code",
         key: "code",
-  
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -104,7 +103,11 @@ export default class ManageFinishProduct extends Component {
         title: "Name",
         dataIndex: "name",
         key: "name",
-       
+
+        filters: [
+          { text: "Joe", value: "Joe" },
+          { text: "Jim", value: "Jim" }
+        ],
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -114,7 +117,11 @@ export default class ManageFinishProduct extends Component {
         title: "Date",
         dataIndex: "date",
         key: "date",
-   
+
+        filters: [
+          { text: "Joe", value: "Joe" },
+          { text: "Jim", value: "Jim" }
+        ],
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -124,7 +131,11 @@ export default class ManageFinishProduct extends Component {
         title: "Grade",
         dataIndex: "grade",
         key: "grade",
-      
+
+        filters: [
+          { text: "Joe", value: "Joe" },
+          { text: "Jim", value: "Jim" }
+        ],
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -134,7 +145,11 @@ export default class ManageFinishProduct extends Component {
         title: "Plant Name",
         dataIndex: "plant_name",
         key: "plant_name",
-        
+
+        filters: [
+          { text: "Joe", value: "Joe" },
+          { text: "Jim", value: "Jim" }
+        ],
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -144,7 +159,11 @@ export default class ManageFinishProduct extends Component {
         title: "QC Manager",
         dataIndex: "qc_manager",
         key: "qc_manager",
-     
+
+        filters: [
+          { text: "Joe", value: "Joe" },
+          { text: "Jim", value: "Jim" }
+        ],
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -154,7 +173,11 @@ export default class ManageFinishProduct extends Component {
         title: "Raw Materials",
         dataIndex: "raw_materials",
         key: "raw_materials",
-     
+
+        filters: [
+          { text: "Joe", value: "Joe" },
+          { text: "Jim", value: "Jim" }
+        ],
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -164,16 +187,20 @@ export default class ManageFinishProduct extends Component {
         title: "Tests",
         dataIndex: "tests",
         key: "tests",
-      
+
+        filters: [
+          { text: "Joe", value: "Joe" },
+          { text: "Jim", value: "Jim" }
+        ],
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
         sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "6%",
+        width: "10%",
         render: (text, record) => (
           <span>
             <a>
@@ -187,7 +214,7 @@ export default class ManageFinishProduct extends Component {
                   <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
+                <a href='#'>
                   <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
@@ -201,7 +228,7 @@ export default class ManageFinishProduct extends Component {
       <div>
         <AntTable
           title={() => <FinishProductTitle />}
-          length
+          maxlength
           nomargin
           columns={columns}
           dataSource={data}

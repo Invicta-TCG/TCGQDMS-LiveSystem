@@ -74,7 +74,15 @@ const BasicCard = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-      `}
+      `};
+
+      ${props =>
+        props.testreport &&
+        css`
+          height: 60px;
+          width: 170px;
+        `}
+    
 `;
 
 export default BasicCard;

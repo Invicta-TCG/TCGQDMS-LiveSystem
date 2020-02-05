@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { Form } from "antd";
+import theme from "../../../theme";
 
 export const MasterLevelForm = styled(Form)`
   display: flex;
@@ -39,4 +40,24 @@ export const MasterLevelFormTitle = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   color: white;
+`;
+
+export const AuditFormTitle = styled.div`
+  padding: 15px;
+  margin: ${props => (props.nomargin ? "0px" : "-7px 0px 1px")};
+  width: 1334px;
+  height: 50px;
+  background: ${theme.colors.primary};
+  /* border-top-right-radius: 10px; */
+  /* border-top-left-radius: 10px; */
+  border-bottom-right-radius: -10px;
+  border-bottom-left-radius: -10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;

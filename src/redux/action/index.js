@@ -5,6 +5,7 @@ import * as Plantlevel from "./master/plantlevel/PlantLevel";
 import * as Sitelevel from "./master/sitelevel/SiteLevel";
 import * as Sample from "./sample/Sample";
 import * as TopbarNavigation from "./topbarnavigation/TopbarNavigation";
+import * as PrivilegeLevelNavigation from "./topbarnavigation/PrivilegeLevelNavigation";
 
 export default {
   CatergoryLevel,
@@ -13,5 +14,6 @@ export default {
   Plantlevel,
   Sitelevel,
   Sample,
-  TopbarNavigation
+  TopbarNavigation,
+  PrivilegeLevelNavigation
 };

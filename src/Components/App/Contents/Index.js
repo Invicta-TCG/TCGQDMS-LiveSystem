@@ -31,6 +31,10 @@ import Profile from "../../profile/Profile";
 import CompanyPrivilege from "../../priviledges/Privileges";
 import FPViewStatus from "../../sample/finshproduct/FPViewStatus/FPViewStatus";
 import TestResultsMaster from "../../test/testresults/TestResultsMaster";
+import GraphDashboard from "../../graphdashboard/GraphDashboard";
+import AuditLog from "../../AuditLog/AuditLog";
+import ProcessViewStatus from "../../sample/process/processviewstatus/ProcessViewStatus";
+import IncomingViewStatus from "../../sample/incoming/IncomingViewStatus/IncomingViewStatus";
 
 // import AddMixDesign from "../../ConfigurationLevel/MixDesign/AddMixDesign";
 // import MixDesign from "../../ConfigurationLevel/MixDesign/AddMixDesign";
@@ -62,6 +66,10 @@ class RouterContent extends React.Component {
             <Switch>
               <Route exact path='/'>
                 <HomeScreen />
+              </Route>
+
+              <Route exact path='/dashboard'>
+                <GraphDashboard />
               </Route>
 
               {/* Plant Level */}
@@ -123,7 +131,16 @@ class RouterContent extends React.Component {
               <Route exact path='/samples/incoming'>
                 <SampleMaster />
               </Route>
-              <Route exact path='/samples/viewtest'>
+
+              <Route exact path='/samples/viewincomingstatus'>
+                <IncomingViewStatus />
+              </Route>
+
+              <Route exact path='/samples/viewprocessstatus'>
+                <ProcessViewStatus />
+              </Route>
+
+              <Route exact path='/samples/viewfpstatus'>
                 <FPViewStatus />
               </Route>
 
@@ -153,6 +170,10 @@ class RouterContent extends React.Component {
               {/* Priviledges */}
               <Route exact path='/priviledges'>
                 <CompanyPrivilege />
+              </Route>
+
+              <Route exact path='/priviledges/auditlog'>
+                <AuditLog />
               </Route>
             </Switch>
           </Content>

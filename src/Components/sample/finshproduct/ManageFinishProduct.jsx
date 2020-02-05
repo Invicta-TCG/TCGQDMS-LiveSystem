@@ -90,7 +90,7 @@ export default class ManageFinishProduct extends Component {
         title: "Sample Code",
         dataIndex: "code",
         key: "code",
-        width: "12%",
+
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -104,7 +104,7 @@ export default class ManageFinishProduct extends Component {
         title: "Customer Name",
         dataIndex: "customerName",
         key: "customerName",
-        width: "12%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -114,7 +114,7 @@ export default class ManageFinishProduct extends Component {
         title: "Date",
         dataIndex: "date",
         key: "date",
-        width: "8%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -124,7 +124,7 @@ export default class ManageFinishProduct extends Component {
         title: "Time",
         dataIndex: "time",
         key: "time",
-        width: "8%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -134,7 +134,7 @@ export default class ManageFinishProduct extends Component {
         title: "Sample Size",
         dataIndex: "size",
         key: "size",
-        width: "12%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -144,7 +144,7 @@ export default class ManageFinishProduct extends Component {
         title: "Project Name",
         dataIndex: "projectName",
         key: "projectName",
-        width: "12%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -154,7 +154,7 @@ export default class ManageFinishProduct extends Component {
         title: "Grade",
         dataIndex: "grade",
         key: "grade",
-        width: "8%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -164,16 +164,16 @@ export default class ManageFinishProduct extends Component {
         title: "Work Order NO",
         dataIndex: "work",
         key: "work",
-        width: "12%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
         sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "6%",
+        width: "10%",
         render: (text, record) => (
           <span>
             <a>
@@ -187,7 +187,7 @@ export default class ManageFinishProduct extends Component {
                   <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
+                <a href='#'>
                   <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
@@ -200,7 +200,7 @@ export default class ManageFinishProduct extends Component {
     return (
       <div>
         <AntTable
-          length
+          maxlength
           nomargin
           title={() => <ManageFinishProductSampleTitle />}
           columns={columns}

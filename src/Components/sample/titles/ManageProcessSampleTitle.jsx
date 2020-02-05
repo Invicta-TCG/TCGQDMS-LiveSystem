@@ -28,7 +28,7 @@ class ManageProcessSampleTitle extends Component {
             color: "white",
             border: "none"
           }}
-          href='#/samples/viewtest'
+          href='#/samples/viewprocessstatus'
         >
           View Test
         </PrimaryButton>

@@ -4,7 +4,7 @@ import {
 } from "../../action/testresults/TestResults";
 
 const initialState = {
-  routepath: "/finishproduct"
+  routepath: "/rawmaterial"
 };
 
 export const RoutingBetweenTestResults = (state = initialState, action) => {

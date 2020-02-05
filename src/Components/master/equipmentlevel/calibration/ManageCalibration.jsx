@@ -82,7 +82,7 @@ export default class ManageCalibration extends Component {
         title: "Code",
         dataIndex: "code",
         key: "code",
-        width: "4%",
+
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -97,7 +97,7 @@ export default class ManageCalibration extends Component {
         title: "Equipment Name",
         dataIndex: "calibrated_date",
         key: "calibrated_date",
-        width: "7%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -108,7 +108,7 @@ export default class ManageCalibration extends Component {
         title: "Calibrated Date",
         dataIndex: "calibrated_date",
         key: "calibrated_date",
-        width: "7%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -119,7 +119,7 @@ export default class ManageCalibration extends Component {
         title: "Due Date",
         dataIndex: "due_date",
         key: "due_date",
-        width: "6%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -129,7 +129,7 @@ export default class ManageCalibration extends Component {
         title: "Calibrated By",
         dataIndex: "calibrated_by",
         key: "calibrated_by",
-        width: "6%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -139,7 +139,7 @@ export default class ManageCalibration extends Component {
         title: "Company",
         dataIndex: "company",
         key: "company",
-        width: "6%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -149,7 +149,7 @@ export default class ManageCalibration extends Component {
         title: "Tester",
         dataIndex: "tester",
         key: "tester",
-        width: "5%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -159,31 +159,31 @@ export default class ManageCalibration extends Component {
         title: "Description",
         dataIndex: "description",
         key: "description",
-        width: "6%",
+
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
         sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "4%",
+        width: "10%",
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -196,7 +196,7 @@ export default class ManageCalibration extends Component {
       <AntTable
         title={() => <CalibrationTitle />}
         columns={columns}
-        length
+        maxlength
         // dataSource={data}
         onChange={this.handleChange}
         pagination={{ defaultPageSize: 3 }}

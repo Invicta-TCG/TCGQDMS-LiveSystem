@@ -24,7 +24,7 @@ class Doughnut extends Component {
     } else if (window.screen.width < 1440) {
       console.log("resized for medium screen");
       this.setState({
-        height: "220",
+        height: "200",
         width: "450"
       });
     }
@@ -32,14 +32,20 @@ class Doughnut extends Component {
 
   render() {
     return (
-      <div className="donut">
+      <div
+        style={{
+          height: "220px",
+          background: "white",
+          borderRadius: "15px",
+          marginTop: "10px"
+        }}
+      >
         <Chart
           options={this.state.options}
           series={this.state.series}
-          type="donut"
+          type='donut'
           width={this.state.width}
           height={this.state.height}
-          style={{ borderRadius: "15px" }}
         />
       </div>
     );

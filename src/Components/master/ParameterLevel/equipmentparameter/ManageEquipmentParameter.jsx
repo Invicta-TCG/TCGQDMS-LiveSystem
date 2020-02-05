@@ -85,7 +85,7 @@ export default class ManageEquipmentParameter extends Component {
       {
         title: "Code",
         dataIndex: "id",
-        width: "12%",
+        // width: "12%",
         key: "id",
         sorter: (a, b) => a.id - b.id,
         sortOrder: sortedInfo.columnKey === "id" && sortedInfo.order
@@ -93,7 +93,7 @@ export default class ManageEquipmentParameter extends Component {
       {
         title: "Equipment",
         dataIndex: "date",
-        width: "12%",
+        // width: "12%",
         key: "id",
         sorter: (a, b) => a.id - b.id,
         sortOrder: sortedInfo.columnKey === "id" && sortedInfo.order
@@ -102,7 +102,21 @@ export default class ManageEquipmentParameter extends Component {
         title: " Parameter",
         dataIndex: "name",
         key: "name",
-        width: "10%",
+        // width: "10%",
+        filters: [
+          { text: "Joe", value: "Joe" },
+          { text: "Jim", value: "Jim" }
+        ],
+        filteredValue: filteredInfo.name || null,
+        onFilter: (value, record) => record.name.includes(value),
+        sorter: (a, b) => a.name.length - b.name.length,
+        sortOrder: sortedInfo.columnKey === "name" && sortedInfo.order
+      },
+      {
+        title: " Short Format",
+        dataIndex: "name",
+        key: "name",
+        // width: "10%",
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -117,32 +131,32 @@ export default class ManageEquipmentParameter extends Component {
         title: "Unit",
         dataIndex: "detalis",
         key: "detalis",
-        width: "10%",
+        // width: "10%",
         render: () => (
-          <a onClick={this.showModal} href="no url">
-            <Icon type="solution" />
+          <a onClick={this.showModal} href='no url'>
+            <Icon type='solution' />
           </a>
         )
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "8%",
+        // width: "10%",
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a href="#">
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -152,7 +166,7 @@ export default class ManageEquipmentParameter extends Component {
     ];
     return (
       <AntTable
-        length
+        maxlength
         title={() => <EquipmentParameterTitle />}
         columns={columns}
         onChange={this.handleChange}

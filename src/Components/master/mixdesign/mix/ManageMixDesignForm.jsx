@@ -87,7 +87,7 @@ export default class ManageMixDesignForm extends Component {
         title: "Code",
         dataIndex: "code",
         key: "id",
-        width: "4%",
+
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -101,7 +101,7 @@ export default class ManageMixDesignForm extends Component {
         title: "Product Name",
         dataIndex: "productName",
         key: "name",
-        width: "6%",
+
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -115,7 +115,7 @@ export default class ManageMixDesignForm extends Component {
         title: "Plant",
         dataIndex: "plant",
         key: "plant",
-        width: "7%",
+
         filters: [
           { text: "Vechical1", value: "Vechical1" },
           { text: "Vechical2", value: " Vechical2" },
@@ -131,7 +131,7 @@ export default class ManageMixDesignForm extends Component {
         title: "Grade",
         dataIndex: "grade",
         key: "grade",
-        width: "7%",
+
         filters: [
           { text: "Vechical1", value: "Vechical1" },
           { text: "Vechical2", value: " Vechical2" },
@@ -148,7 +148,7 @@ export default class ManageMixDesignForm extends Component {
         title: "Date",
         dataIndex: "date",
         key: "date",
-        width: "7%",
+
         filters: [
           { text: "Vechical1", value: "Vechical1" },
           { text: "Vechical2", value: " Vechical2" },
@@ -164,7 +164,7 @@ export default class ManageMixDesignForm extends Component {
         title: "Raw Material",
         dataIndex: "rawmaterial",
         key: "rawmaterial",
-        width: "7%",
+
         filters: [
           { text: "Vechical1", value: "Vechical1" },
           { text: "Vechical2", value: " Vechical2" },
@@ -178,24 +178,24 @@ export default class ManageMixDesignForm extends Component {
       },
 
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "4%",
+        width: "7%",
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>

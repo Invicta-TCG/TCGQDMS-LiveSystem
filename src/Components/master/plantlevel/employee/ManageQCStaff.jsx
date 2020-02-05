@@ -195,38 +195,6 @@ export default class ManageQCStaff extends Component {
         sorter: (a, b) => a.role.length - b.role.length,
         sortOrder: sortedInfo.columnKey === "role" && sortedInfo.order
       },
-      // {
-      //   title: "Contact No",
-      //   dataIndex: "contactno",
-      //   key: "contactno",
-      //   width: "9%",
-      //   filters: [
-      //     { text: "Vechical1", value: "Vechical1" },
-      //     { text: "Vechical2", value: " Vechical2" },
-      //     { text: "Vechical3", value: "Vechical3" },
-      //     { text: "Vechical4", value: "Vechical4" }
-      //   ],
-      //   filteredValue: filteredInfo.role || null,
-      //   onFilter: (value, record) => record.role.includes(value),
-      //   sorter: (a, b) => a.role.length - b.role.length,
-      //   sortOrder: sortedInfo.columnKey === "role" && sortedInfo.order
-      // },
-      // {
-      //   title: "Address",
-      //   dataIndex: "address",
-      //   key: "address",
-      //   width: "7%",
-      //   filters: [
-      //     { text: "Vechical1", value: "Vechical1" },
-      //     { text: "Vechical2", value: " Vechical2" },
-      //     { text: "Vechical3", value: "Vechical3" },
-      //     { text: "Vechical4", value: "Vechical4" }
-      //   ],
-      //   filteredValue: filteredInfo.role || null,
-      //   onFilter: (value, record) => record.role.includes(value),
-      //   sorter: (a, b) => a.role.length - b.role.length,
-      //   sortOrder: sortedInfo.columnKey === "role" && sortedInfo.order
-      // },
 
       {
         title: "Other Details",
@@ -235,29 +203,29 @@ export default class ManageQCStaff extends Component {
         width: "7%",
         render: () => (
           <a onClick={this.showModal}>
-            <Icon type="solution" />
+            <Icon type='solution' />
           </a>
         )
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "4%",
+        width: "7%",
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -268,9 +236,9 @@ export default class ManageQCStaff extends Component {
 
     return (
       <AntTable
-        length
+        maxlength
         title={() => <EmployeeMasterTitle />}
-        className="plantManageTable"
+        className='plantManageTable'
         columns={columns}
         dataSource={data}
         onChange={this.handleChange}

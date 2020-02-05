@@ -84,7 +84,7 @@ export default class ManageNature extends Component {
         title: "Code",
         dataIndex: "code",
         key: "code",
-        width: "4%",
+        // width: "4%",
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -98,7 +98,7 @@ export default class ManageNature extends Component {
         title: "Equipment Name",
         dataIndex: "equipment_name",
         key: "equipment_name",
-        width: "6%",
+        // width: "6%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -109,7 +109,7 @@ export default class ManageNature extends Component {
         title: "Brand Name",
         dataIndex: "brand_name",
         key: "brand_name",
-        width: "6%",
+        // width: "6%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -119,7 +119,7 @@ export default class ManageNature extends Component {
         title: "Model Name",
         dataIndex: "model_name",
         key: "model_name",
-        width: "6%",
+        // width: "6%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -129,7 +129,7 @@ export default class ManageNature extends Component {
         title: " Description",
         dataIndex: " description",
         key: "description",
-        width: "6%",
+        // width: "6%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -137,9 +137,9 @@ export default class ManageNature extends Component {
       },
 
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "4%",
+        width: "12%",
         render: (text, record) => (
           <span>
             <a>
@@ -153,7 +153,7 @@ export default class ManageNature extends Component {
                   <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
+                <a href='#'>
                   <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>

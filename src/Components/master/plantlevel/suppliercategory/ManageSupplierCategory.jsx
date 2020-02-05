@@ -121,9 +121,9 @@ export default class ManageSupplierCategory extends Component {
         sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "4%",
+        width: "7%",
         render: (text, record) => (
           <span>
             <a>
@@ -137,7 +137,7 @@ export default class ManageSupplierCategory extends Component {
                   <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
+                <a href='#'>
                   <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>

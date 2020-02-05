@@ -93,24 +93,24 @@ export default class ManageTestParameter extends Component {
         sortOrder: sortedInfo.columnKey === "name" && sortedInfo.order
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "8%",
+        width: "7%",
         render: (text, record) => (
           <span>
-            <a href="no url">
-              <Icon type="edit" />
+            <a>
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
-            <a href="no url">
+            <Divider type='vertical' />
+            <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a href="no url">
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>

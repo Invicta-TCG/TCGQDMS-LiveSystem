@@ -160,24 +160,24 @@ export default class ManageSupplier extends Component {
         sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "4%",
+        width: "7%",
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -187,9 +187,9 @@ export default class ManageSupplier extends Component {
     ];
     return (
       <AntTable
-        length
+        maxlength
         title={() => <SupplierMasterTitle />}
-        className="plantManageTable"
+        className='plantManageTable'
         columns={columns}
         // dataSource={data}
         onChange={this.handleChange}

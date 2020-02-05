@@ -100,7 +100,7 @@ export default class ManageIncoming extends Component {
       {
         title: " Code",
         dataIndex: "code",
-        width: "12%",
+
         key: "code",
         sorter: (a, b) => a.id - b.id,
         sortOrder: sortedInfo.columnKey === "id" && sortedInfo.order
@@ -108,7 +108,7 @@ export default class ManageIncoming extends Component {
       {
         title: "Supplier Name",
         dataIndex: "suppliername",
-        width: "12%",
+
         key: "suppliername",
         sorter: (a, b) => a.id - b.id,
         sortOrder: sortedInfo.columnKey === "id" && sortedInfo.order
@@ -117,7 +117,7 @@ export default class ManageIncoming extends Component {
         title: "Raw Material",
         dataIndex: "rawmaterial",
         key: "rawmaterial",
-        width: "10%",
+
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -131,7 +131,7 @@ export default class ManageIncoming extends Component {
         title: "Delivered Date",
         dataIndex: "delivereddate",
         key: "delivereddate",
-        width: "12%",
+
         filters: [
           { text: "Vechical1", value: "Vechical1" },
           { text: "Vechical2", value: " Vechical2" },
@@ -147,10 +147,10 @@ export default class ManageIncoming extends Component {
         title: "Delivery Report",
         dataIndex: "deliveryreport",
         key: "deliveryreport",
-        width: "16%",
+
         render: (text, record) => (
           <Icon
-            type="carry-out"
+            type='carry-out'
             style={{ color: "green" }}
             onClick={this.showModal}
           />
@@ -159,29 +159,28 @@ export default class ManageIncoming extends Component {
       {
         title: "Vechical No",
         dataIndex: "vehicleno",
-        key: "vehicleno",
-        width: "10%"
+        key: "vehicleno"
       },
 
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "8%",
+
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a href="#">
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -192,7 +191,7 @@ export default class ManageIncoming extends Component {
     return (
       <div>
         <AntTable
-          length
+          maxlength
           nomargin
           columns={columns}
           dataSource={data}
@@ -201,7 +200,7 @@ export default class ManageIncoming extends Component {
           title={() => <ManageIncomingSampleTitle />}
         />
         <Modal
-          width="500px"
+          width='500px'
           visible={this.state.deliveryreport}
           onOk={this.handleOk}
           okType={"default"}
@@ -218,7 +217,7 @@ export default class ManageIncoming extends Component {
                 Delivery Report
               </p>
               <Icon
-                type="close-circle"
+                type='close-circle'
                 onClick={this.handleCancel}
                 style={{
                   color: "white"
@@ -226,7 +225,7 @@ export default class ManageIncoming extends Component {
               />
             </MasterLevelFormTitle>
           }
-          footer={<PrimaryButton type="primary">hellow</PrimaryButton>}
+          footer={<PrimaryButton type='primary'>hellow</PrimaryButton>}
         >
           <DeliveryReport />
         </Modal>

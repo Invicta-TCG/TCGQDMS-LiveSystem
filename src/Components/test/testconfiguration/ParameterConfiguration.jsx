@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Checkbox } from "antd";
+import { Checkbox, Icon, Divider, Popconfirm } from "antd";
 
 import { FlexContainer } from "../../styledcomponents/container/FlexGrid";
 
@@ -68,9 +68,29 @@ export default class ParameterConfiguration extends Component {
         width: "8%"
       },
       {
-        title: <p style={{ color: "black", marginLeft: "40px" }}>Action</p>,
+        title: "Edit & Delete",
         key: "action",
-        width: "7%"
+        width: "7%",
+        render: (text, record) => (
+          <span>
+            <a>
+              <Icon type='edit' />
+            </a>
+            <Divider type='vertical' />
+            <a>
+              <Popconfirm
+                title='Are you sure you want to Delete this?'
+                icon={
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
+                }
+              >
+                <a href='#'>
+                  <Icon type='delete'></Icon>
+                </a>
+              </Popconfirm>
+            </a>
+          </span>
+        )
       }
     ];
     const columns3 = [
@@ -80,12 +100,7 @@ export default class ParameterConfiguration extends Component {
         width: "10%",
         key: "code"
       },
-      {
-        title: <p style={{ color: "black" }}>Location</p>,
-        dataIndex: "location",
-        width: "16%",
-        key: "location"
-      },
+
       {
         title: <p style={{ color: "black" }}>Equipment</p>,
         dataIndex: "name",
@@ -114,26 +129,27 @@ export default class ParameterConfiguration extends Component {
     return (
       <FlexContainer style={{ justifyContent: "center" }}>
         <AntTable
-          style={{ width: "600px", height: "200px" }}
-          size={this.state.size}
-          columns={columns1}
-          dataSource={data}
-          title={() => <h3>Test Parameter</h3>}
-        />
-        <AntTable
-          style={{ width: "600px" }}
-          size={this.state.size}
-          columns={columns3}
-          dataSource={data1}
-          title={() => <h3>Equation Parameter</h3>}
-        />
-        <AntTable
           style={{ width: "1200px" }}
           length
           size={this.state.size}
           columns={columns2}
           dataSource={data2}
           title={() => <AdditionalParameterTitle />}
+        />
+
+        <AntTable
+          style={{ width: "600px" }}
+          size={this.state.size}
+          columns={columns3}
+          dataSource={data1}
+          title={() => <h3>Equipment Parameter</h3>}
+        />
+        <AntTable
+          style={{ width: "600px", height: "200px" }}
+          size={this.state.size}
+          // columns={columns1}
+          // dataSource={data}
+          title={() => <h3>Parameter Configuration</h3>}
         />
       </FlexContainer>
     );

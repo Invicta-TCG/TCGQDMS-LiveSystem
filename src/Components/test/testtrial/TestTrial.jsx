@@ -45,8 +45,9 @@ const columns = [
   },
 
   {
-    title: "Action",
+    title: "Edit & Delete",
     key: "action",
+    width: "7%",
     render: (text, record) => (
       <span>
         <a>

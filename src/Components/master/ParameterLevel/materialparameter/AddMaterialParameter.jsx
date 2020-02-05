@@ -65,16 +65,16 @@ export default class AddMaterialParameter extends Component {
       <div key={i}>
         <Row>
           <Input
-            placeholder="Code"
-            name="parameter"
+            placeholder='Code'
+            name='parameter'
             value={el.parameter || ""}
             onChange={this.handleChange.bind(this, i)}
             style={{ width: "100px" }}
           />
 
           <Input
-            placeholder="Material ID"
-            name="parameter"
+            placeholder='Material '
+            name='parameter'
             value={el.parameter || ""}
             onChange={this.handleChange.bind(this, i)}
             style={{ width: "100px", marginLeft: "10PX" }}
@@ -82,31 +82,25 @@ export default class AddMaterialParameter extends Component {
 
           <Select
             style={{ width: "140px", marginLeft: "10px" }}
-            placeholder="Parameter ID"
-          >
-            <Option value="g"> g </Option>
-            <Option value="Kg">kg </Option>
-          </Select>
+            placeholder='Parameter '
+          ></Select>
 
           <Select
             style={{ width: "140px", marginLeft: "10px" }}
-            placeholder="MainCategory ID"
-          >
-            <Option value="g"> A </Option>
-            <Option value="Kg">B </Option>
-          </Select>
+            placeholder='MainCategory ID'
+          ></Select>
 
           <Input
-            placeholder="Min Value"
-            name="parameter"
+            placeholder='Min Value'
+            name='parameter'
             value={el.parameter || ""}
             onChange={this.handleChange.bind(this, i)}
             style={{ width: "100px", marginLeft: "20PX" }}
           />
 
           <Input
-            placeholder="Max Value"
-            name="parameter"
+            placeholder='Max Value'
+            name='parameter'
             value={el.parameter || ""}
             onChange={this.handleChange.bind(this, i)}
             style={{ width: "100px", marginLeft: "20PX" }}
@@ -114,15 +108,12 @@ export default class AddMaterialParameter extends Component {
 
           <Select
             style={{ width: "140px", marginLeft: "40px" }}
-            placeholder="Unit"
-          >
-            <Option value="g"> g </Option>
-            <Option value="Kg">kg </Option>
-          </Select>
+            placeholder='Unit'
+          ></Select>
 
           <Button
-            type=""
-            value="remove"
+            type=''
+            value='remove'
             onClick={this.removeClick.bind(this, i)}
             style={{ width: "75px", marginLeft: "40px" }}
           >
@@ -155,11 +146,11 @@ export default class AddMaterialParameter extends Component {
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
-            <Button key="back" onClick={this.handleCancel}>
+            <Button key='back' onClick={this.handleCancel}>
               Return
             </Button>,
             <PrimaryButton
-              key="submit"
+              key='submit'
               loading={loading}
               onClick={this.handleOk}
               style={{ background: "#001328", color: "white", border: "none" }}
@@ -167,7 +158,7 @@ export default class AddMaterialParameter extends Component {
               Submit
             </PrimaryButton>
           ]}
-          width="1100px"
+          width='1100px'
           title={
             <MasterLevelFormTitle>
               <p
@@ -178,7 +169,7 @@ export default class AddMaterialParameter extends Component {
                 Add Material Parameter
               </p>
               <Icon
-                type="close-circle"
+                type='close-circle'
                 onClick={this.handleCancel}
                 style={{
                   color: "white"
@@ -193,8 +184,8 @@ export default class AddMaterialParameter extends Component {
             <Row>
               <Col span={3}>
                 <Button
-                  type=""
-                  value="add more"
+                  type=''
+                  value='add more'
                   onClick={this.addClick.bind(this)}
                 >
                   Add more

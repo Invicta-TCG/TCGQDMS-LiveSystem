@@ -150,29 +150,29 @@ export default class ManageCustomer extends Component {
         width: "10%",
         render: () => (
           <a onClick={this.showModal}>
-            <Icon type="solution" />
+            <Icon type='solution' />
           </a>
         )
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "8%",
+        width: "7%",
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a href="#">
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -184,7 +184,7 @@ export default class ManageCustomer extends Component {
       <AntTable
         length
         title={() => <CustomerMasterTitle />}
-        className="plantManageTable"
+        className='plantManageTable'
         columns={columns}
         // dataSource={data}
         onChange={this.handleChange}

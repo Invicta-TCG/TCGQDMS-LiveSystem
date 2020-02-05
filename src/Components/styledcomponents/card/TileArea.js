@@ -36,6 +36,16 @@ export const TileAreaText = styled.div`
       margin-top: -0px;
       font-size: 13px;
     `}
+  ${props =>
+    props.testreport &&
+    css`
+      flex-basis: 100px;
+    `}
+  ${props =>
+    props.materialcategory &&
+    css`
+      flex-basis: 75px;
+    `}
 `;
 
 export const TileAreaAction = styled.div`

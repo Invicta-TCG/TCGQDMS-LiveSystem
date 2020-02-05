@@ -4,9 +4,7 @@ import { Popconfirm, Divider, Icon } from "antd";
 import UserRoleMasterTitle from "../titles/UserRoleMasterTitle";
 import { AntTable } from "../../../styledcomponents/table/AntTabl";
 
-const data = [
-  
-];
+const data = [];
 
 export default class ManageUserRoles extends Component {
   state = {
@@ -122,24 +120,24 @@ export default class ManageUserRoles extends Component {
         sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "4%",
+        width: "7%",
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -151,14 +149,13 @@ export default class ManageUserRoles extends Component {
     return (
       <AntTable
         length
-        className="userRolesManageTable"
+        className='userRolesManageTable'
         title={() => <UserRoleMasterTitle />}
         columns={columns}
         dataSource={data}
         onChange={this.handleChange}
         pagination={{ defaultPageSize: 3 }}
         size={this.state.size}
-        
       />
     );
   }

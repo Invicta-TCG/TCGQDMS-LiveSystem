@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { Table, Popconfirm, Divider, Icon } from "antd";
 import NatureTitle from "../titles/MaterialNatureTitle";
+import { AntTable } from "../../../styledcomponents/table/AntTabl";
 
 export default class ManageNature extends Component {
   state = {
@@ -100,24 +101,24 @@ export default class ManageNature extends Component {
         sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "4%",
+        width: "7%",
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -127,22 +128,14 @@ export default class ManageNature extends Component {
     ];
 
     return (
-      <Table
+      <AntTable
+        length
         title={() => <NatureTitle />}
         columns={columns}
         // dataSource={data}
         onChange={this.handleChange}
         pagination={{ defaultPageSize: 3 }}
         size={this.state.size}
-        style={{
-          background: "white",
-          border: "none",
-          borderRadius: "15px",
-          marginLeft: "15px",
-          marginTop: "20px",
-          width: "800px",
-          boxShadow: "8px 5px 15px 5px rgba(0, 0, 0, 0.19)"
-        }}
       />
     );
   }

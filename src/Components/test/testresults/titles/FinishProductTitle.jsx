@@ -12,6 +12,16 @@ import { Drawer, Select, Input } from "antd";
 const Option = Select;
 
 class FinishProductTitle extends Component {
+  state = {
+    accuracy: "accurate"
+  };
+  onChange = value => {
+    console.log(value);
+    this.setState({
+      accuracy: value
+    });
+  };
+
   render() {
     return (
       <FlexContainer>
@@ -33,7 +43,7 @@ class FinishProductTitle extends Component {
           closable={false}
           onClose={this.props.onCloseFinishProductFilterDrawer}
           visible={this.props.visible}
-          width={400}
+          width={520}
         >
           <FlexContainer column style={{ height: "130px" }}>
             <div>
@@ -61,16 +71,36 @@ class FinishProductTitle extends Component {
                 name='accuracy'
                 style={{ width: "120px" }}
                 defaultValue='accurate'
+                value={this.state.accuracy}
+                onChange={this.onChange}
               >
                 <Option value='between'>Between</Option>
                 <Option value='accurate'>Accurate</Option>
               </Select>
-              <Input
-                id='grade'
-                name='grade'
-                style={{ width: "120px" }}
-                placeholder='Grade'
-              />
+              {this.state.accuracy === "accurate" ? (
+                <Input
+                  id='grade'
+                  name='grade'
+                  style={{ width: "180px" }}
+                  placeholder='Grade'
+                />
+              ) : (
+                <div style={{ marginLeft: "-5px" }}>
+                  <Input
+                    id='max'
+                    name='max'
+                    placeholder='Maximum'
+                    style={{ width: "100px" }}
+                  />
+                  <PrimaryButton disabled>~</PrimaryButton>
+                  <Input
+                    id='min'
+                    name='min'
+                    placeholder='Minimum'
+                    style={{ width: "100px" }}
+                  />
+                </div>
+              )}
               <PrimaryButton
                 type='primary'
                 style={{ background: theme.colors.primary, border: "none" }}

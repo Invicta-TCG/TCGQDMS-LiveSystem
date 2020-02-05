@@ -16,13 +16,16 @@
   margin-left: -10px;
 }
 .homescreen_logo_gap {
-  width: 1069px;
+  width: 920px;
 }
 .samples_logo_gap {
   width: 1009px;
 }
 .testrials_logo_gap {
   width: 1009px;
+}
+.configuration_logo_gap {
+  width: 720px;
 }
 
 .topnavmenu {

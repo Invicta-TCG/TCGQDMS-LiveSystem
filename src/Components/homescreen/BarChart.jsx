@@ -42,7 +42,7 @@ class BarChart extends Component {
     } else if (window.screen.width < 1440) {
       console.log("resized for medium screen");
       this.setState({
-        height: 240,
+        height: 245,
         width: 450
       });
     }
@@ -53,11 +53,11 @@ class BarChart extends Component {
       <Chart
         options={this.state.options}
         series={this.state.series}
-        type="bar"
-        className="barchart"
+        type='bar'
+        className='barchart'
         height={this.state.height}
         width={this.state.width}
-        style={{ background: "#fffbed" }}
+        style={{ background: "#fffbed", height: "200px" }}
       />
     );
   }

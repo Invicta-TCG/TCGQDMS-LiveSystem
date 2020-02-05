@@ -6,7 +6,7 @@ class LineChart extends Component {
     super(props);
 
     this.state = {
-      width: "450",
+      width: "250",
       height: "190",
       options: {
         chart: {
@@ -35,8 +35,8 @@ class LineChart extends Component {
     } else if (window.screen.width < 1440) {
       console.log("resized for medium screen");
       this.setState({
-        height: "190",
-        width: "450"
+        height: "240",
+        width: "400"
       });
     }
   }
@@ -44,15 +44,15 @@ class LineChart extends Component {
   render() {
     return (
       <div
-        className="app"
+        className='app'
         style={{ background: "#fffbed", borderRadius: "15px" }}
       >
-        <div className="row">
-          <div className="mixed-chart">
+        <div className='row'>
+          <div className='mixed-chart'>
             <Chart
               options={this.state.options}
               series={this.state.series}
-              type="area"
+              type='area'
               width={this.state.width}
               height={this.state.height}
             />

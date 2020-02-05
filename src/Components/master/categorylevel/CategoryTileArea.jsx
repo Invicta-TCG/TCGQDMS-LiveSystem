@@ -22,7 +22,7 @@ class CategoryTitleArea extends Component {
         <BasicCard
           finalproduct
           tileareacard
-          size="small"
+          size='small'
           hoverable={true}
           onClick={this.props.routeToMaterialType}
         >
@@ -30,7 +30,7 @@ class CategoryTitleArea extends Component {
           <TileAreaAction>
             <Icon
               filled
-              type="plus"
+              type='plus'
               style={{ color: "red", fontSize: "22px" }}
             />
           </TileAreaAction>
@@ -38,15 +38,15 @@ class CategoryTitleArea extends Component {
         <BasicCard
           finalproduct
           tileareacard
-          size="small"
+          size='small'
           hoverable={true}
           onClick={this.props.routeToMainCategoryMaster}
         >
-          <TileAreaText category>Main Category</TileAreaText>
+          <TileAreaText category>Material Category</TileAreaText>
           <TileAreaAction>
             <Icon
               filled
-              type="plus"
+              type='plus'
               style={{ color: "red", fontSize: "22px" }}
             />
           </TileAreaAction>
@@ -54,15 +54,17 @@ class CategoryTitleArea extends Component {
         <BasicCard
           finalproduct
           tileareacard
-          size="small"
+          size='small'
           hoverable={true}
           onClick={this.props.routeToSubCategoryMaster}
         >
-          <TileAreaText category>Sub Category</TileAreaText>
+          <TileAreaText materialcategory unit>
+            Material Sub Category
+          </TileAreaText>
           <TileAreaAction>
             <Icon
               filled
-              type="plus"
+              type='plus'
               style={{ color: "red", fontSize: "22px" }}
             />
           </TileAreaAction>
@@ -70,7 +72,7 @@ class CategoryTitleArea extends Component {
         <BasicCard
           finalproduct
           tileareacard
-          size="small"
+          size='small'
           hoverable={true}
           onClick={this.props.routeToSampleCategoryMaster}
         >
@@ -78,7 +80,7 @@ class CategoryTitleArea extends Component {
           <TileAreaAction>
             <Icon
               filled
-              type="plus"
+              type='plus'
               style={{ color: "red", fontSize: "22px" }}
             />
           </TileAreaAction>

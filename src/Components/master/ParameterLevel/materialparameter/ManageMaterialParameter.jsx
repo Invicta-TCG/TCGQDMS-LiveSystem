@@ -68,24 +68,24 @@ export default class ManageMaterialParameter extends Component {
       {
         title: "ID",
         dataIndex: "id",
-        width: "3%",
+
         key: "id",
         sorter: (a, b) => a.id - b.id,
         sortOrder: sortedInfo.columnKey === "id" && sortedInfo.order
       },
       {
-        title: "Material ID",
+        title: "Material ",
         dataIndex: "date",
-        width: "10%",
+
         key: "id",
         sorter: (a, b) => a.id - b.id,
         sortOrder: sortedInfo.columnKey === "id" && sortedInfo.order
       },
       {
-        title: " Parameter ID",
+        title: " Parameter ",
         dataIndex: "name",
         key: "name",
-        width: "13%",
+
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -99,7 +99,7 @@ export default class ManageMaterialParameter extends Component {
         title: " Main Category",
         dataIndex: "name",
         key: "name",
-        width: "13%",
+
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -113,7 +113,7 @@ export default class ManageMaterialParameter extends Component {
         title: " Min Value",
         dataIndex: "name",
         key: "name",
-        width: "10%",
+
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -127,7 +127,7 @@ export default class ManageMaterialParameter extends Component {
         title: " Max Value",
         dataIndex: "name",
         key: "name",
-        width: "10%",
+
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -141,7 +141,7 @@ export default class ManageMaterialParameter extends Component {
         title: "Unit",
         dataIndex: "role",
         key: "role",
-        width: "12%",
+
         filters: [
           { text: "Vechical1", value: "Vechical1" },
           { text: "Vechical2", value: " Vechical2" },
@@ -155,24 +155,24 @@ export default class ManageMaterialParameter extends Component {
       },
 
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "8%",
+        // width: "7%",
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a href="#">
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -182,7 +182,7 @@ export default class ManageMaterialParameter extends Component {
     ];
     return (
       <AntTable
-        length
+        maxlength
         title={() => <MaterialParameterTitle />}
         columns={columns}
         onChange={this.handleChange}

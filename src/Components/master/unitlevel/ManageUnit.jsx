@@ -14,6 +14,7 @@ export default class ManageUnit extends Component {
     visible: false,
     size: "small"
   };
+
   componentWillMount() {
     if (window.screen.width > 1900) {
       console.log("hooray");
@@ -95,24 +96,24 @@ export default class ManageUnit extends Component {
         sortOrder: sortedInfo.columnKey === "name" && sortedInfo.order
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        // width: "8%",
+        // width: "7%",
         render: (text, record) => (
           <span>
-            <a href="no url">
-              <Icon type="edit" />
+            <a>
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
-            <a href="no url">
+            <Divider type='vertical' />
+            <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a href="no url">
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -122,21 +123,13 @@ export default class ManageUnit extends Component {
     ];
     return (
       <AntTable
+        length
         title={() => <UnitTitle />}
         columns={columns}
         // dataSource={data}
         onChange={this.handleChange}
         pagination={{ defaultPageSize: 4 }}
         size={this.state.size}
-        style={{
-          background: "white",
-          border: "none",
-          borderRadius: "15px",
-          marginLeft: "15px",
-          marginTop: "20px",
-          width: "800px",
-          boxShadow: "8px 5px 15px 5px rgba(0, 0, 0, 0.19)"
-        }}
       />
     );
   }

@@ -15,6 +15,8 @@ export const AntTable = styled(Table)`
       ? "600px"
       : props.length2
       ? "850px"
+      : props.maxlength
+      ? "1100px"
       : "800px"};
   box-shadow: 8px 5px 15px 5px rgba(0, 0, 0, 0.19);
   height: ${props => (props.lowHeight ? "220px" : "auto")};

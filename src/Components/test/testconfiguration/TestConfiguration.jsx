@@ -37,49 +37,52 @@ export default class TestConfiguration extends Component {
             style={{ justifyContent: "flex-start" }}
           >
             {/* Code */}
-            <div className="input_wrapper">
-              <label for="code" className="label">
+            <div className='input_wrapper'>
+              <label for='code' className='label'>
                 Code
               </label>
               <Input
-                id="code"
-                name="code"
-                placeholder="Enter Codes"
-                className="input_Field"
+                id='code'
+                name='code'
+                style={{ width: 200 }}
+                placeholder='Enter Code'
+                className='input_Field'
               />
             </div>
             {/* First Name */}
-            <div className="input_wrapper">
-              <label for="firstname" className="label">
+            <div className='input_wrapper'>
+              <label for='firstname' className='label'>
                 PreFix
               </label>
               <Input
-                id="firstname"
-                name="firstname"
-                placeholder="Enter Prefix"
-                className="input_Field"
+                id='firstname'
+                name='firstname'
+                style={{ width: 200 }}
+                placeholder='Enter Prefix'
+                className='input_Field'
               />
             </div>
             {/* Last Name */}
-            <div className="input_wrapper">
-              <label for="lastname" className="label">
+            <div className='input_wrapper'>
+              <label for='lastname' className='label'>
                 Test Name
               </label>
               <Input
-                id="lastname"
-                name="lastname"
-                placeholder="Enter Test Name"
-                className="input_Field"
+                id='lastname'
+                name='lastname'
+                style={{ width: 200 }}
+                placeholder='Enter Test Name'
+                className='input_Field'
               />
             </div>
 
             {/* Plant Multiselect */}
-            <div className="input_wrapper">
-              <label className="label">Plant </label>
+            <div className='input_wrapper'>
+              <label className='label'>Plant </label>
               <Select
-                mode="multiple"
+                mode='multiple'
                 style={{ width: 200 }}
-                placeholder="Select Plant"
+                placeholder='Select Plant'
                 onChange={handleChange}
               >
                 {children.map(post => (
@@ -89,81 +92,79 @@ export default class TestConfiguration extends Component {
             </div>
 
             {/* Contact No */}
-            <div className="input_wrapper">
-              <label for="contactno" className="label">
+            <div className='input_wrapper'>
+              <label for='contactno' className='label'>
                 Material Type
               </label>
               <Select
                 showSearch
-                className="input_Field"
-                style={{ width: 250 }}
-                placeholder="Select a Type"
-                optionFilterProp="children"
-              >
-                <Option value="peliyagoda">Peliyagoda</Option>
-                <Option value="jaffna">Jaffna</Option>
-                <Option value="trincomalee">Trincomalee</Option>
-                <Option value="trincomalee">Ratmalana</Option>
-              </Select>
+                className='input_Field'
+                style={{ width: 200 }}
+                placeholder='Select a Type'
+                optionFilterProp='children'
+              ></Select>
             </div>
-            <div className="input_wrapper">
-              <label for="contactno" className="label">
+            <div className='input_wrapper'>
+              <label for='contactno' className='label'>
                 Main Category
               </label>
               <Select
                 showSearch
-                className="input_Field"
-                style={{ width: 250 }}
-                placeholder="Select a Category"
-                optionFilterProp="children"
-              >
-                <Option value="peliyagoda">Peliyagoda</Option>
-                <Option value="jaffna">Jaffna</Option>
-                <Option value="trincomalee">Trincomalee</Option>
-                <Option value="trincomalee">Ratmalana</Option>
-              </Select>
+                className='input_Field'
+                style={{ width: 200 }}
+                placeholder='Select a Category'
+                optionFilterProp='children'
+              ></Select>
             </div>
             {/* Plant Name */}
-            <div className="input_wrapper">
-              <label for="plant" className="label">
+            <div className='input_wrapper'>
+              <label for='plant' className='label'>
                 Sub Category
               </label>
               <Select
-                className="input_Field"
+                className='input_Field'
                 showSearch
-                style={{ width: 250 }}
-                placeholder="Select a Category"
-                optionFilterProp="children"
-              >
-                <Option value="peliyagoda">Peliyagoda</Option>
-                <Option value="jaffna">Jaffna</Option>
-                <Option value="trincomalee">Trincomalee</Option>
-                <Option value="trincomalee">Ratmalana</Option>
-              </Select>
+                style={{ width: 200 }}
+                placeholder='Select a Category'
+                optionFilterProp='children'
+              ></Select>
+            </div>
+
+            <div className='input_wrapper'>
+              <label for='plant' className='label'>
+                Material Parameter
+              </label>
+              <Select
+                className='input_Field'
+                showSearch
+                style={{ width: 200 }}
+                placeholder='Select Material Parameter'
+                optionFilterProp='children'
+              ></Select>
             </div>
             {/* Address  */}
-            <div className="input_wrapper" style={{ flexBasis: "30%" }}>
-              <label for="address" className="label">
+            <div className='input_wrapper' style={{ flexBasis: "30%" }}>
+              <label for='address' className='label'>
                 Description
               </label>
               <TextArea
-                className="textarea1"
+                className='textarea1'
                 style={{ width: 387 }}
-                id="address"
-                name="address"
-                placeholder=""
+                id='address'
+                name='address'
+                placeholder=''
               />
             </div>
-            <div className="input_wrapper" style={{ flexBasis: "30%" }}>
-              <label for="address" className="label">
+            <div className='input_wrapper' style={{ flexBasis: "30%" }}>
+              <label for='address' className='label'>
                 Procedure
               </label>
               <TextArea
-                className="textarea1"
-                style={{ width: 387 }}
-                id="address"
-                name="address"
-                placeholder=""
+                className='textarea1'
+                style={{ width: 470 }}
+                id='address'
+                name='address'
+                placeholder=''
               />
             </div>
           </FlexContainer>

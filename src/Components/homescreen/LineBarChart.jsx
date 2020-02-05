@@ -55,11 +55,11 @@ const data = [
 export default class LineBarChart extends PureComponent {
   render() {
     return (
-      <div className="linebarchart">
+      <div className='linebarchart'>
         <ResponsiveContainer>
           <ComposedChart
             width={400}
-            height={95}
+            height={155}
             data={data}
             margin={{
               top: 20,
@@ -68,19 +68,19 @@ export default class LineBarChart extends PureComponent {
               left: -18
             }}
           >
-            <CartesianGrid stroke="#f5f5f5" />
-            <XAxis dataKey="name" />
+            <CartesianGrid stroke='#f5f5f5' />
+            <XAxis dataKey='name' />
             <YAxis />
             <Tooltip />
             <Legend />
             <Area
-              type="monotone"
-              dataKey="amt"
-              fill="#8884d8"
-              stroke="#8884d8"
+              type='monotone'
+              dataKey='amt'
+              fill='#8884d8'
+              stroke='#8884d8'
             />
-            <Bar dataKey="pv" barSize={10} fill="#413ea0" />
-            <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+            <Bar dataKey='pv' barSize={10} fill='#413ea0' />
+            <Line type='monotone' dataKey='uv' stroke='#ff7300' />
           </ComposedChart>
         </ResponsiveContainer>
       </div>

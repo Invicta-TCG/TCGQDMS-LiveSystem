@@ -52,7 +52,7 @@ export default class TestParameterTable extends Component {
           size={this.state.size}
           bordered={false}
           columns={testParameterColumns}
-          title={() => TestTitle("Test Parameter")}
+          title={() => TestTitle("Parameter Configuration")}
           showHeader={false}
           style={{
             width: "400px",

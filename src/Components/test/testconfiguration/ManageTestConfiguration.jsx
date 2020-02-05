@@ -26,44 +26,44 @@ export default class ManageTestConfiguration extends Component {
       {
         title: <p style={{ color: "black" }}>Test Code</p>,
         dataIndex: "id",
-        width: "10%",
+        // width: "10%",
         key: "id"
       },
       {
         title: <p style={{ color: "black" }}>Category</p>,
         dataIndex: "date",
-        width: "16%",
+        // width: "16%",
         key: "id"
       },
       {
         title: <p style={{ color: "black" }}>Material </p>,
         dataIndex: "name",
-        key: "name",
-        width: "16%"
+        key: "name"
+        // width: "16%"
       },
 
       {
         title: <p style={{ color: "black" }}>Test Name </p>,
         dataIndex: "name",
-        key: "name",
-        width: "16%"
+        key: "name"
+        // width: "16%"
       },
       {
         title: <p style={{ color: "black" }}>Test Parameter </p>,
         dataIndex: "name",
-        key: "name",
-        width: "16%"
+        key: "name"
+        // width: "16%"
       },
       {
         title: <p style={{ color: "black" }}>Equation </p>,
         dataIndex: "name",
-        key: "name",
-        width: "16%"
+        key: "name"
+        // width: "16%"
       },
       {
-        title: <p style={{ color: "black" }}>Action</p>,
+        title: "Edit & Delete",
         key: "action",
-        width: "8%",
+        width: "12%",
         render: (text, record) => (
           <span>
             <a>

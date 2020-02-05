@@ -15,7 +15,8 @@ import {
   TOGGLE_TO_SAMPLE_TYPE_NAVIGATION,
   TOGGLE_TO_TEST_TRIALS_NAVIGATION,
   TOGGLE_TO_TEST_CONFIGURATION_NAVIGATION,
-  TOGGLE_TO_PRIVILEDGES_NAVIGATION
+  TOGGLE_TO_PRIVILEDGES_NAVIGATION,
+  TOGGLE_TO_TEST_RESULTS_NAVIGATION
 } from "../../redux/action/topbarnavigation/TopbarNavigation";
 import { HomeColoredCard } from "./HomeColoredCard";
 import StrengthTest from "./charts/StrengthTest";
@@ -35,26 +36,26 @@ class HomeScreen extends Component {
 
   render() {
     return (
-      <FlexContainer>
-        <div className="tiles_area">
+      <FlexContainer normal>
+        <div className='tiles_area'>
           {/* tile column 1 start*/}
-          <div className="tile_col_1">
+          <div className='tile_col_1'>
             {/* column 1 tile 1 start*/}
             <NavigationLink
-              to="/master/plantlevel"
+              to='/master/plantlevel'
               onClick={this.props.toggleMasterNavigation}
             >
               <ImageCard master>
                 <div>
-                  <h1 className="h1">Master</h1>
+                  <h1 className='h1'>Master</h1>
                   <br></br>
                   <div style={{ height: "25px" }}></div>
-                  <div className="ani">
+                  <div className='ani'>
                     <h4
                       style={{
                         color: "#ffff"
                       }}
-                      className="ani1"
+                      className='ani1'
                     >
                       Plant Level
                     </h4>
@@ -86,22 +87,22 @@ class HomeScreen extends Component {
             {/* column 1 tile 1 end*/}
             {/* column 1 tile 2 start*/}
             <NavigationLink
-              to="/samples"
+              to='/samples'
               onClick={this.props.toggleSampleNavigation}
             >
               <ImageCard configuration>
                 <div>
-                  <h1 className="h1" style={{ marginLeft: "-120px" }}>
+                  <h1 className='h1' style={{ marginLeft: "-120px" }}>
                     Samples
                   </h1>
                   <br></br>
                   <div style={{ height: "25px" }}></div>
-                  <div className="ani">
+                  <div className='ani'>
                     <h4
                       style={{
                         color: "#ffff"
                       }}
-                      className="ani1"
+                      className='ani1'
                     >
                       Raw Materials
                     </h4>
@@ -118,23 +119,26 @@ class HomeScreen extends Component {
             </NavigationLink>
             {/* column 1 tile 2 end*/}
             {/* column 1 tile 3 start*/}
-            <NavigationLink to="/testreport">
+            <NavigationLink
+              to='/testreport'
+              onClick={this.props.toggleTestResults}
+            >
               <ImageCard reports>
                 <div>
-                  <h1 className="h1" style={{ marginLeft: "-90px" }}>
+                  <h1 className='h1' style={{ marginLeft: "-90px" }}>
                     {" "}
                     Test Result & <br />
                     Test Report{" "}
                   </h1>
                   <br></br>
                   <div style={{ height: "25px" }}></div>
-                  <div className="ani" style={{ marginTop: "-20px" }}>
+                  <div className='ani' style={{ marginTop: "-20px" }}>
                     <h4
                       style={{
                         color: "#ffff",
                         marginTop: "5px"
                       }}
-                      className="ani1"
+                      className='ani1'
                     >
                       Samples
                     </h4>
@@ -154,25 +158,25 @@ class HomeScreen extends Component {
           {/* tile column 1 end*/}
 
           {/* tile column 2 start*/}
-          <div className="tile_col_2">
+          <div className='tile_col_2'>
             {/* column 2 tile 1 start*/}
             <NavigationLink
-              to="/testconfiguration"
+              to='/testconfiguration'
               onClick={this.props.toggleTestConfigurationNavigation}
             >
               <ImageCard testing>
                 <div>
-                  <h1 className="h1" style={{ marginLeft: "-45px" }}>
+                  <h1 className='h1' style={{ marginLeft: "-45px" }}>
                     Test Configuration
                   </h1>
                   <br></br>
                   <div style={{ height: "25px" }}></div>
-                  <div className="ani">
+                  <div className='ani'>
                     <h4
                       style={{
                         color: "#ffff"
                       }}
-                      className="ani1"
+                      className='ani1'
                     >
                       Raw Materials
                     </h4>
@@ -190,22 +194,22 @@ class HomeScreen extends Component {
             {/* column 2 tile 1 end*/}
             {/* column 2 tile 2 start*/}
             <NavigationLink
-              to="/test/testtrial"
+              to='/test/testtrial'
               onClick={this.props.toggleTestTrialsNavigation}
             >
               <ImageCard testTrial>
                 <div>
-                  <h1 className="h1" style={{ marginLeft: "-95px" }}>
+                  <h1 className='h1' style={{ marginLeft: "-95px" }}>
                     Test Trials
                   </h1>
                   <br></br>
                   <div style={{ height: "25px" }}></div>
-                  <div className="ani">
+                  <div className='ani'>
                     <h4
                       style={{
                         color: "#ffff"
                       }}
-                      className="ani1"
+                      className='ani1'
                     >
                       Raw Materials
                     </h4>
@@ -230,25 +234,25 @@ class HomeScreen extends Component {
             {/* column 2 tile 2 end*/}
             {/* column 2 tile 3 start*/}
             <NavigationLink
-              to="/priviledges"
+              to='/priviledges'
               onClick={this.props.togglePriviledgeNavigation}
             >
               <ImageCard settings>
                 <div>
                   <h1
-                    className="h1"
+                    className='h1'
                     style={{ textAlign: "left", marginLeft: "2em" }}
                   >
                     Settings
                   </h1>
                   <br></br>
                   <div style={{ height: "25px" }}></div>
-                  <div className="ani">
+                  <div className='ani'>
                     <h4
                       style={{
                         color: "#ffff"
                       }}
-                      className="ani1"
+                      className='ani1'
                     >
                       Privileges
                     </h4>
@@ -272,7 +276,14 @@ class HomeScreen extends Component {
           <Slider2 />s
         </div> */}
         <FlexContainer column>
-          <FlexContainer style={{ width: "750px" }}>
+          <FlexContainer
+            style={{
+              width: "790px",
+              background: "white",
+              padding: "10px",
+              borderRadius: "15px"
+            }}
+          >
             {HomeColoredCard(
               "blue",
               "Fine Aggregate",
@@ -326,6 +337,10 @@ const mapDispatchToProps = dispatch => {
     togglePriviledgeNavigation: () => {
       dispatch({ type: TOGGLE_TO_PRIVILEDGES_NAVIGATION });
       console.log("toggled to priviledges navigation click dispatched");
+    },
+    toggleTestResults: () => {
+      dispatch({ type: TOGGLE_TO_TEST_RESULTS_NAVIGATION });
+      console.log("toggled to test results navigation click dispatched");
     }
   };
 };

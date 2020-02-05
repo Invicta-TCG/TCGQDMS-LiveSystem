@@ -28,7 +28,7 @@ class ManageIncomingSampleTitle extends Component {
             color: "white",
             border: "none"
           }}
-          href='#/samples/viewtest'
+          href='#/samples/viewincomingstatus'
         >
           View Test
         </PrimaryButton>

@@ -12,7 +12,11 @@ const sagaMiddleware = createSagaMiddleware();
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["topbarNavigationReducers"]
+  whitelist: [
+    "topbarNavigationReducers",
+    "masterLevelNavigationReducer",
+    "priviledgeLevelNavigationReducer"
+  ]
 };
 let devtools = composeWithDevTools({
   actionCreators,

@@ -10,6 +10,7 @@ import ManageCustomer from "./customer/ManageCustomer";
 import ManageSupplier from "./supplier/ManageSupplier";
 import ManageUserRoles from "./userrole/ManageUserRoles";
 import ManageSupplierCategory from "./suppliercategory/ManageSupplierCategory";
+import { CHECK_WHETHER_DEFAULT_MASTER_LEVEL } from "../../../redux/action/topbarnavigation/MasterLevelNavigation";
 
 class PlantMaster extends Component {
   constructor(props) {
@@ -19,11 +20,13 @@ class PlantMaster extends Component {
       visible: this.props.visible
     };
   }
+
   componentDidMount() {
-    console.log(globalHistory.location.hash);
-    let orgString = globalHistory.location.hash;
-    let modString = orgString.substr(0, 8);
-    console.log(modString);
+    if (this.props.masterkeys === "plantlevel") {
+      console.log("out passed");
+    } else {
+      this.props.navigationRefresh();
+    }
   }
 
   controlstatus = status => {
@@ -59,10 +62,18 @@ class PlantMaster extends Component {
 
 const mapStateToProps = state => {
   return {
-    routepath: state.plantLevelReducers.RoutingBetweenPlantLevel.routepath
+    routepath: state.plantLevelReducers.RoutingBetweenPlantLevel.routepath,
+    masterkeys: state.masterLevelNavigationReducer.masterlevelkey
   };
 };
 
-// const mapDispatchToProps = dispatch => null;
+const mapDispatchToProps = dispatch => {
+  return {
+    navigationRefresh: () => {
+      dispatch({ type: CHECK_WHETHER_DEFAULT_MASTER_LEVEL });
+      console.log("check default master key while master clicked");
+    }
+  };
+};
 
-export default connect(mapStateToProps, null)(PlantMaster);
+export default connect(mapStateToProps, mapDispatchToProps)(PlantMaster);

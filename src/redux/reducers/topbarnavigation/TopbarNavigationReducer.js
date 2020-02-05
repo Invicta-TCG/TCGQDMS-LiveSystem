@@ -4,7 +4,9 @@ import {
   TOGGLE_TO_SAMPLE_TYPE_NAVIGATION,
   TOGGLE_TO_TEST_TRIALS_NAVIGATION,
   TOGGLE_TO_TEST_CONFIGURATION_NAVIGATION,
-  TOGGLE_TO_PRIVILEDGES_NAVIGATION
+  TOGGLE_TO_PRIVILEDGES_NAVIGATION,
+  TOGGLE_TO_TEST_RESULTS_NAVIGATION,
+  TOGGLE_TO_DASHBOARD_NAVIGATION
 } from "../../action/topbarnavigation/TopbarNavigation";
 
 const initialState = {
@@ -49,7 +51,16 @@ export const TopbarNavigationReducer = (state = initialState, action) => {
         ...state,
         navpath: (state.navpath = "/priviledges")
       };
-
+    case TOGGLE_TO_TEST_RESULTS_NAVIGATION:
+      return {
+        ...state,
+        navpath: (state.navpath = "/testresults")
+      };
+    case TOGGLE_TO_DASHBOARD_NAVIGATION:
+      return {
+        ...state,
+        navpath: (state.navpath = "/dashboard")
+      };
     default:
       return state;
   }

@@ -89,7 +89,7 @@ export default class ManageProject extends Component {
         title: "Code",
         dataIndex: "code",
         key: "code",
-        width: "3%",
+        // width: "3%",
         filters: [
           { text: "Joe", value: "Joe" },
           { text: "Jim", value: "Jim" }
@@ -103,7 +103,7 @@ export default class ManageProject extends Component {
         title: "Project Name",
         dataIndex: "project_name",
         key: "project_name",
-        width: "6.5%",
+        // width: "6.5%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -113,7 +113,7 @@ export default class ManageProject extends Component {
         title: "Mix Design",
         dataIndex: "mix_design",
         key: "mix_design",
-        width: "6%",
+        // width: "6%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -123,7 +123,7 @@ export default class ManageProject extends Component {
         title: "Grade",
         dataIndex: "grade",
         key: "grade",
-        width: "4%",
+        // width: "4%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -133,7 +133,7 @@ export default class ManageProject extends Component {
         title: "Customer",
         dataIndex: "customer",
         key: "customer",
-        width: "5%",
+        // width: "5%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -143,7 +143,7 @@ export default class ManageProject extends Component {
         title: "Contact Person",
         dataIndex: "contact_person",
         key: "contact_person",
-        width: "7%",
+        // width: "7%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -153,7 +153,7 @@ export default class ManageProject extends Component {
         title: "Contact Number",
         dataIndex: "contact_number",
         key: "contact_number",
-        width: "8%",
+        // width: "8%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
@@ -163,16 +163,16 @@ export default class ManageProject extends Component {
         title: "Plant",
         dataIndex: "plant",
         key: "plant",
-        width: "4%",
+        // width: "4%",
         filteredValue: filteredInfo.name || null,
         onFilter: (value, record) => record.name.includes(value),
         sorter: (a, b) => a.user - b.user,
         sortOrder: sortedInfo.columnKey === "user" && sortedInfo.order
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "4%",
+        width: "7%",
         render: (text, record) => (
           <span>
             <a>
@@ -186,7 +186,7 @@ export default class ManageProject extends Component {
                   <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a>
+                <a href='#'>
                   <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
@@ -198,7 +198,7 @@ export default class ManageProject extends Component {
 
     return (
       <AntTable
-        length
+        maxlength
         title={() => <ManageProjectMasterTitle />}
         columns={columns}
         dataSource={data}

@@ -48,20 +48,20 @@ export default class AddSubCategoryForm extends Component {
             marginLeft: "-45px"
           }}
         >
-          Add Sub Category
+          Add Material Sub Category
         </PrimaryButton>
         <Modal
-          width="330px"
+          width='330px'
           visible={visible}
           closable={false}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
-            <Button key="back" onClick={this.handleCancel}>
+            <Button key='back' onClick={this.handleCancel}>
               Return
             </Button>,
             <PrimaryButton
-              key="submit"
+              key='submit'
               loading={loading}
               onClick={this.handleOk}
               style={{ background: "#001328", color: "white", border: "none" }}
@@ -76,10 +76,10 @@ export default class AddSubCategoryForm extends Component {
                   color: "white"
                 }}
               >
-                Add Sub Category
+                Add Material Sub Category
               </p>
               <Icon
-                type="close-circle"
+                type='close-circle'
                 onClick={this.handleCancel}
                 style={{
                   color: "white"
@@ -90,34 +90,34 @@ export default class AddSubCategoryForm extends Component {
         >
           <MasterLevelForm>
             {/* Code */}
-            <div className="input_wrapper">
-              <label for="code" className="label">
+            <div className='input_wrapper'>
+              <label for='code' className='label'>
                 Code:
               </label>
-              <Input id="code" name="code" placeholder="Enter the Code" />
+              <Input id='code' name='code' placeholder='Enter the Code' />
             </div>
 
             {/* User Role */}
 
-            <div className="input_wrapper">
-              <label for="user_role" className="label">
+            <div className='input_wrapper'>
+              <label for='user_role' className='label'>
                 SubCategory:
               </label>
               <Input
-                id="user_role"
-                name="user_role"
-                placeholder="Enter SubCategory"
+                id='user_role'
+                name='user_role'
+                placeholder='Enter SubCategory'
               />
             </div>
 
-            <div className="input_wrapper">
-              <label for="main_category" className="label">
+            <div className='input_wrapper'>
+              <label for='main_category' className='label'>
                 Main Category:
               </label>
               <Select
-                placeholder="Select Main Category"
-                id="main_category"
-                name="main_category "
+                placeholder='Select Main Category'
+                id='main_category'
+                name='main_category '
                 style={{ width: "180px" }}
               ></Select>
             </div>

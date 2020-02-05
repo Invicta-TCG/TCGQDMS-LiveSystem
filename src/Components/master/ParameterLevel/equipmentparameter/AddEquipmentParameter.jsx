@@ -49,17 +49,17 @@ export default class AddEquipmentParameter extends Component {
           Add Equipment Parameter
         </PrimaryButton>
         <Modal
-          width="500px"
+          width='500px'
           visible={visible}
           closable={false}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
-            <Button key="back" onClick={this.handleCancel}>
+            <Button key='back' onClick={this.handleCancel}>
               Return
             </Button>,
             <PrimaryButton
-              key="submit"
+              key='submit'
               loading={loading}
               onClick={this.handleOk}
               style={{ background: "#001328", color: "white", border: "none" }}
@@ -77,7 +77,7 @@ export default class AddEquipmentParameter extends Component {
                 Add Equipment Parameter
               </p>
               <Icon
-                type="close-circle"
+                type='close-circle'
                 onClick={this.handleCancel}
                 style={{
                   color: "white"
@@ -88,44 +88,55 @@ export default class AddEquipmentParameter extends Component {
         >
           <MasterLevelForm>
             {/* Code */}
-            <div className="input_wrapper">
-              <label for="code" className="label">
+            <div className='input_wrapper'>
+              <label for='code' className='label'>
                 Code:
               </label>
-              <Input id="code" name="code" placeholder="Enter the Code" />
+              <Input id='code' name='code' placeholder='Enter the Code' />
             </div>
 
-            <div className="input_wrapper">
-              <label for="user_role" className="label">
+            <div className='input_wrapper'>
+              <label for='user_role' className='label'>
                 Equipment:
               </label>
               <Input
-                id="user_role"
-                name="user_role"
-                placeholder="Enter the Equipment"
+                id='user_role'
+                name='user_role'
+                placeholder='Enter the Equipment'
               />
             </div>
 
             {/* User Role */}
-            <div className="input_wrapper">
-              <label for="user_role" className="label">
+            <div className='input_wrapper'>
+              <label for='user_role' className='label'>
                 Parameter:
               </label>
               <Input
-                id="user_role"
-                name="user_role"
-                placeholder="Enter the Parameter"
+                id='user_role'
+                name='user_role'
+                placeholder='Enter the Parameter'
               />
             </div>
 
-            <div className="input_wrapper">
-              <label for="user_role" className="label">
+            <div className='input_wrapper'>
+              <label for='user_role' className='label'>
+                Short Format
+              </label>
+              <Input
+                id='user_role'
+                name='user_role'
+                placeholder='Enter the Short Format'
+              />
+            </div>
+
+            <div className='input_wrapper'>
+              <label for='user_role' className='label'>
                 Unit:
               </label>
               <Input
-                id="user_role"
-                name="user_role"
-                placeholder="Enter the Unit"
+                id='user_role'
+                name='user_role'
+                placeholder='Enter the Unit'
               />
             </div>
           </MasterLevelForm>

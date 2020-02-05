@@ -7,21 +7,37 @@ import "./style.css";
 import { connect } from "react-redux";
 import {
   TOGGLE_TO_HOME_SCREEN_NAVIGATION,
-  CHECK_WHETHER_REFRESH_NAVIGATION
+  TOGGLE_TO_DASHBOARD_NAVIGATION
 } from "../../redux/action/topbarnavigation/TopbarNavigation";
 import { TopNavMenu } from "../styledcomponents/topnavigation/TopnavMenu";
+import {
+  TOGGLE_BETWEEN_MASTER_LEVELS,
+  CHECK_WHETHER_DEFAULT_MASTER_LEVEL
+} from "../../redux/action/topbarnavigation/MasterLevelNavigation";
+import { TOGGLE_BETWEEN_PRIVILEDGE_LEVELS } from "../../redux/action/topbarnavigation/PrivilegeLevelNavigation";
 // import ProfileImg from "../../assets/avatarui.jpg";
 //import './Dashboard.css';
 // const Search = Input.Search;
 const { Header } = Layout;
 
 class HeaderComponent extends React.Component {
-  componentDidMount() {
-    console.log(this.props.navpath);
-  }
+  state = {
+    masterbgcolor: "blue",
+    mastercolor: "white"
+  };
+
+  // componentDidMount() {
+  //   this.props.navigationRefresh();
+
+  //   if (this.props.masterkeys === "plantlevel") {
+  //     console.log("plant");
+  //   } else {
+  //     console.log("fail");
+  //   }
+  // }
 
   // componentWillMount() {
-  //   this.resolveAvatarHideAndSeek();
+  //   this.props.navigationRefresh();
   // }
 
   //temporary avatar hiding problem
@@ -40,7 +56,9 @@ class HeaderComponent extends React.Component {
           theme='dark'
           mode='horizontal'
           position='right'
-          defaultSelectedKeys={["1"]}
+          defaultSelectedKeys={["100"]}
+          selectedKeys={this.props.masterkeys}
+          onClick={this.props.toggleBetweenMasterLevels}
         >
           <NavigationLink to='#' style={{ cursor: "default" }}>
             <div className='logo' />
@@ -50,97 +68,77 @@ class HeaderComponent extends React.Component {
             <div className='homebtn' />
           </NavigationLink>
 
-          <SubMenu
+          {/* <SubMenu
+            key='1'
             title={
               <span className='submenu-title-wrapper'>
-                <NavigationLink to='/master/plantlevel'>
-                  <Icon type='dropbox' /> Plant
-                </NavigationLink>
+                <Icon type='dropbox' /> Plant
               </span>
             }
-          />
+          /> */}
+          <Menu.Item
+            key='plantlevel'
+            style={{
+              marginLeft: "8px"
+            }}
+          >
+            <NavigationLink to='/master/plantlevel'>
+              <Icon type='dropbox' />
+              <span>Plant</span>
+            </NavigationLink>
+          </Menu.Item>
 
-          <SubMenu
-            title={
-              <span className='submenu-title-wrapper'>
-                <NavigationLink to='/master/categorylevel'>
-                  <Icon type='dropbox' /> Category
-                </NavigationLink>
-              </span>
-            }
-          />
+          <Menu.Item key='categorylevel' style={{}}>
+            <NavigationLink to='/master/categorylevel'>
+              <Icon type='dropbox' /> <span>Category</span>
+            </NavigationLink>
+          </Menu.Item>
 
-          <SubMenu
-            title={
-              <span className='submenu-title-wrapper'>
-                <NavigationLink to='/master/unitlevel'>
-                  <Icon type='dropbox' /> Unit
-                </NavigationLink>
-              </span>
-            }
-          />
+          <Menu.Item key='unitlevel' style={{}}>
+            <NavigationLink to='/master/unitlevel'>
+              <Icon type='dropbox' /> <span>Unit</span>
+            </NavigationLink>
+          </Menu.Item>
 
-          <SubMenu
-            title={
-              <span className='submenu-title-wrapper'>
-                <NavigationLink to='/master/materiallevel'>
-                  <Icon type='dropbox' /> Material
-                </NavigationLink>
-              </span>
-            }
-          />
+          <Menu.Item key='materiallevel' style={{}}>
+            <NavigationLink to='/master/materiallevel'>
+              <Icon type='dropbox' /> <span>Material</span>
+            </NavigationLink>
+          </Menu.Item>
 
-          <SubMenu
-            title={
-              <span className='submenu-title-wrapper'>
-                <NavigationLink to='/master/equipmentlevel'>
-                  <Icon type='dropbox' /> Equipment
-                </NavigationLink>
-              </span>
-            }
-          />
+          <Menu.Item key='equipmentlevel' style={{}}>
+            <NavigationLink to='/master/equipmentlevel'>
+              <Icon type='dropbox' /> <span>Equipment</span>
+            </NavigationLink>
+          </Menu.Item>
 
-          <SubMenu
-            title={
-              <span className='submenu-title-wrapper'>
-                <NavigationLink to='/master/testlevel'>
-                  <Icon type='dropbox' /> Test
-                </NavigationLink>
-              </span>
-            }
-          />
+          <Menu.Item key='testlevel' style={{}}>
+            <NavigationLink to='/master/testlevel'>
+              <Icon type='dropbox' /> <span>Test</span>
+            </NavigationLink>
+          </Menu.Item>
 
-          <SubMenu
-            title={
-              <span className='submenu-title-wrapper'>
-                <NavigationLink to='/master/parameterlevel'>
-                  <Icon type='dropbox' /> Parameter
-                </NavigationLink>
-              </span>
-            }
-          />
+          <Menu.Item key='parameterlevel' style={{}}>
+            <NavigationLink to='/master/parameterlevel'>
+              <Icon type='dropbox' /> <span>Parameter</span>
+            </NavigationLink>
+          </Menu.Item>
 
-          <SubMenu
-            title={
-              <span className='submenu-title-wrapper'>
-                <NavigationLink to='/master/mixdesignlevel'>
-                  <Icon type='dropbox' /> Mix Design
-                </NavigationLink>
-              </span>
-            }
-          />
+          <Menu.Item key='mixdesignlevel' style={{}}>
+            <NavigationLink to='/master/mixdesignlevel'>
+              <Icon type='dropbox' /> <span>Mix Design</span>
+            </NavigationLink>
+          </Menu.Item>
 
-          <SubMenu
-            title={
-              <span className='submenu-title-wrapper'>
-                <NavigationLink to='/master/sitelevel'>
-                  <Icon type='dropbox' /> Site
-                </NavigationLink>
-              </span>
-            }
-          />
+          <Menu.Item key='sitelevel' style={{}}>
+            <NavigationLink to='/master/sitelevel'>
+              <Icon type='dropbox' /> <span>Site</span>
+            </NavigationLink>
+          </Menu.Item>
+
           <div className='master_logo_gap' />
           <SubMenu
+            key='masterprofilemenu'
             title={
               <span className='submenu-title-wrapper'>
                 <Avatar size='large'>
@@ -157,13 +155,13 @@ class HeaderComponent extends React.Component {
               </span>
             }
           >
-            <Menu.Item key='15'>
+            <Menu.Item key='masterprofilesetting'>
               <Link to='/profile'>
                 <Icon type='user' />
                 Profile Setting
               </Link>
             </Menu.Item>
-            <Menu.Item key='16'>
+            <Menu.Item key='masterprofilelogout'>
               <Link to='/logout'>
                 <Icon type='logout' theme='outlined' twoToneColor />
                 Log Out
@@ -190,6 +188,7 @@ class HeaderComponent extends React.Component {
 
           <div className='samples_logo_gap' />
           <SubMenu
+            key='sprof'
             title={
               <span className='submenu-title-wrapper'>
                 <Avatar size='large'>
@@ -206,13 +205,13 @@ class HeaderComponent extends React.Component {
               </span>
             }
           >
-            <Menu.Item key='15'>
+            <Menu.Item key='sprof1'>
               <Link to='/profile'>
                 <Icon type='user' />
                 Profile Setting
               </Link>
             </Menu.Item>
-            <Menu.Item key='16'>
+            <Menu.Item key='sprof2'>
               <Link to='/logout'>
                 <Icon type='logout' theme='outlined' twoToneColor />
                 Log Out
@@ -227,11 +226,24 @@ class HeaderComponent extends React.Component {
           theme='dark'
           mode='horizontal'
           position='right'
-          defaultSelectedKeys={["1"]}
+          defaultSelectedKeys={["0"]}
         >
           <NavigationLink to='/'>
             <div className='logo' />
           </NavigationLink>
+          <SubMenu
+            key={"1"}
+            title={
+              <span className='submenu-title-wrapper'>
+                <NavigationLink
+                  to='/dashboard'
+                  onClick={this.props.toggleDashboard}
+                >
+                  <Icon type='pie-chart' /> Dashboard
+                </NavigationLink>
+              </span>
+            }
+          />
           <div className='homescreen_logo_gap' />
           <SubMenu
             title={
@@ -265,7 +277,10 @@ class HeaderComponent extends React.Component {
           </SubMenu>
         </TopNavMenu>
       );
-    } else if (this.props.navpath === "/testtrials") {
+    } else if (
+      this.props.navpath === "/testtrials" ||
+      this.props.navpath === "/dashboard"
+    ) {
       return (
         <TopNavMenu
           theme='dark'
@@ -370,6 +385,69 @@ class HeaderComponent extends React.Component {
           mode='horizontal'
           position='right'
           defaultSelectedKeys={["1"]}
+          selectedKeys={this.props.priviledgeKeys}
+          onClick={this.props.toggleBetweenPriviledgeLevels}
+        >
+          <NavigationLink to='#' style={{ cursor: "default" }}>
+            <div className='logo' />
+          </NavigationLink>
+
+          <NavigationLink to='/' style={{ marginLeft: "10px" }}>
+            <div className='homebtn' />
+          </NavigationLink>
+
+          <Menu.Item key='priviledges' style={{ marginLeft: "10px" }}>
+            <NavigationLink to='/priviledges'>
+              <Icon type='dropbox' /> <span>Priviledges</span>
+            </NavigationLink>
+          </Menu.Item>
+
+          <Menu.Item key='auditlog' style={{}}>
+            <NavigationLink to='/priviledges/auditlog'>
+              <Icon type='dropbox' /> <span>Audit Log</span>
+            </NavigationLink>
+          </Menu.Item>
+
+          <div className='configuration_logo_gap' />
+          <SubMenu
+            title={
+              <span className='submenu-title-wrapper'>
+                <Avatar size='large'>
+                  <Icon
+                    type='user'
+                    style={{
+                      fontSize: "24px",
+                      textAlign: "center",
+                      padding: "2px",
+                      margin: "4px"
+                    }}
+                  ></Icon>
+                </Avatar>
+              </span>
+            }
+          >
+            <Menu.Item key='15'>
+              <Link to='/profile'>
+                <Icon type='user' />
+                Profile Setting
+              </Link>
+            </Menu.Item>
+            <Menu.Item key='16'>
+              <Link to='/logout'>
+                <Icon type='logout' theme='outlined' twoToneColor />
+                Log Out
+              </Link>
+            </Menu.Item>
+          </SubMenu>
+        </TopNavMenu>
+      );
+    } else if (this.props.navpath === "/testresults") {
+      return (
+        <TopNavMenu
+          theme='dark'
+          mode='horizontal'
+          position='right'
+          defaultSelectedKeys={["1"]}
         >
           <NavigationLink to='#' style={{ cursor: "default" }}>
             <div className='logo' />
@@ -438,7 +516,9 @@ class HeaderComponent extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    navpath: state.topbarNavigationReducers.navpath
+    navpath: state.topbarNavigationReducers.navpath,
+    masterkeys: state.masterLevelNavigationReducer.masterlevelkey,
+    priviledgeKeys: state.priviledgeLevelNavigationReducer.priviledgekeys
   };
 };
 
@@ -449,8 +529,20 @@ const mapDispatchToProps = dispatch => {
       console.log("toggle to home screen navigation click dispatched");
     },
     navigationRefresh: () => {
-      dispatch({ type: CHECK_WHETHER_REFRESH_NAVIGATION });
-      console.log("check path while refresh dispatched");
+      dispatch({ type: CHECK_WHETHER_DEFAULT_MASTER_LEVEL });
+      console.log("check default master key while master clicked");
+    },
+    toggleDashboard: () => {
+      dispatch({ type: TOGGLE_TO_DASHBOARD_NAVIGATION });
+      console.log("toggle to dashboard screen click dispatches");
+    },
+    toggleBetweenMasterLevels: e => {
+      dispatch({ type: TOGGLE_BETWEEN_MASTER_LEVELS, key: e.key });
+      console.log("master level navigation toggleed key is " + e.key);
+    },
+    toggleBetweenPriviledgeLevels: e => {
+      dispatch({ type: TOGGLE_BETWEEN_PRIVILEDGE_LEVELS, key: e.key });
+      console.log("priviledge level navigation toggleed key is " + e.key);
     }
   };
 };

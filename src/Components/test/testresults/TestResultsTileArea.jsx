@@ -21,11 +21,13 @@ class TestResultsTileArea extends Component {
         <BasicCard
           finalproduct
           tileareacard
-          size='small'
+          size='medium'
           hoverable={true}
           onClick={this.props.routeToRawMaterialTestResults}
         >
-          <TileAreaText unit>RawMaterial Test Result</TileAreaText>
+          <TileAreaText unit testreport>
+            Raw Material Test Result
+          </TileAreaText>
           <TileAreaAction>
             <Icon
               filled
@@ -42,7 +44,9 @@ class TestResultsTileArea extends Component {
           hoverable={true}
           onClick={this.props.routeToFinishProductTestResults}
         >
-          <TileAreaText unit>FinishProduct Test Result</TileAreaText>
+          <TileAreaText unit testreport>
+            Finish Product Test Result
+          </TileAreaText>
           <TileAreaAction>
             <Icon
               filled

@@ -27,7 +27,7 @@ class ManageFinishProductSampleTitle extends Component {
             color: "white",
             border: "none"
           }}
-          href='#/samples/viewtest'
+          href='#/samples/viewfpstatus'
         >
           View Test
         </PrimaryButton>

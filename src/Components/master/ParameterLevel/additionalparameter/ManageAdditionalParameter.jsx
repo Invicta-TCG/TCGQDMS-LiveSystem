@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import {  Icon, Popconfirm, Divider } from "antd";
-import AdditionalParametertitle from '../titles/AdditionalParameterTitle';
+import React, { Component } from "react";
+import { Icon, Popconfirm, Divider } from "antd";
+import AdditionalParametertitle from "../titles/AdditionalParameterTitle";
 
 import { AntTable } from "../../../styledcomponents/table/AntTabl";
 export default class ManageAdditionalParameter extends Component {
@@ -24,60 +24,60 @@ export default class ManageAdditionalParameter extends Component {
       });
     }
   }
-    
-      showModal = () => {
-        this.setState({
-          visible: true
-        });
-      };
-    
-      handleOk = e => {
-        console.log(e);
-        this.setState({
-          visible: false
-        });
-      };
-    
-      handleCancel = e => {
-        console.log(e);
-        this.setState({
-          visible: false
-        });
-      };
-    
-      handleChange = (pagination, filters, sorter) => {
-        console.log("Various parameters", pagination, filters, sorter);
-        this.setState({
-          filteredInfo: filters,
-          sortedInfo: sorter
-        });
-      };
-    
-      clearFilters = () => {
-        this.setState({ filteredInfo: null });
-      };
-    
-      clearAll = () => {
-        this.setState({
-          filteredInfo: null,
-          sortedInfo: null
-        });
-      };
-    
-      setAgeSort = () => {
-        this.setState({
-          sortedInfo: {
-            order: "descend",
-            columnKey: "age"
-          }
-        });
-      };
-    
-      onChange(pageNumber) {
-        console.log("Page: ", pageNumber);
+
+  showModal = () => {
+    this.setState({
+      visible: true
+    });
+  };
+
+  handleOk = e => {
+    console.log(e);
+    this.setState({
+      visible: false
+    });
+  };
+
+  handleCancel = e => {
+    console.log(e);
+    this.setState({
+      visible: false
+    });
+  };
+
+  handleChange = (pagination, filters, sorter) => {
+    console.log("Various parameters", pagination, filters, sorter);
+    this.setState({
+      filteredInfo: filters,
+      sortedInfo: sorter
+    });
+  };
+
+  clearFilters = () => {
+    this.setState({ filteredInfo: null });
+  };
+
+  clearAll = () => {
+    this.setState({
+      filteredInfo: null,
+      sortedInfo: null
+    });
+  };
+
+  setAgeSort = () => {
+    this.setState({
+      sortedInfo: {
+        order: "descend",
+        columnKey: "age"
       }
-    render() {
-        let { sortedInfo, filteredInfo } = this.state;
+    });
+  };
+
+  onChange(pageNumber) {
+    console.log("Page: ", pageNumber);
+  }
+  render() {
+    let { sortedInfo, filteredInfo } = this.state;
     sortedInfo = sortedInfo || {};
     filteredInfo = filteredInfo || {};
     const columns = [
@@ -133,30 +133,30 @@ export default class ManageAdditionalParameter extends Component {
         key: "detalis",
         width: "10%",
         render: () => (
-          <a onClick={this.showModal} href="no url">
-            <Icon type="solution" />
+          <a onClick={this.showModal} href='no url'>
+            <Icon type='solution' />
           </a>
         )
       },
       {
-        title: "Action",
+        title: "Edit & Delete",
         key: "action",
-        width: "8%",
+        width: "7%",
         render: (text, record) => (
           <span>
             <a>
-              <Icon type="edit" />
+              <Icon type='edit' />
             </a>
-            <Divider type="vertical" />
+            <Divider type='vertical' />
             <a>
               <Popconfirm
-                title="Are you sure you want to Delete this?"
+                title='Are you sure you want to Delete this?'
                 icon={
-                  <Icon type="question-circle-o" style={{ color: "red" }} />
+                  <Icon type='question-circle-o' style={{ color: "red" }} />
                 }
               >
-                <a href="#">
-                  <Icon type="delete"></Icon>
+                <a href='#'>
+                  <Icon type='delete'></Icon>
                 </a>
               </Popconfirm>
             </a>
@@ -166,13 +166,13 @@ export default class ManageAdditionalParameter extends Component {
     ];
     return (
       <AntTable
-      length
-      title={() => <AdditionalParametertitle/>}
-      columns={columns}
-      onChange={this.handleChange}
-      pagination={{ defaultPageSize: 3 }}
-      size={this.state.size}
-    />
-             );
-    }
+        length
+        title={() => <AdditionalParametertitle />}
+        columns={columns}
+        onChange={this.handleChange}
+        pagination={{ defaultPageSize: 3 }}
+        size={this.state.size}
+      />
+    );
+  }
 }
